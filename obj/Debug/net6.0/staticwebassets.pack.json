@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\EduHomeProject.bundle.scp.css",
+      "PackagePath": "staticwebassets\\EduHomeProject.bundle.scp.css"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.EduHomeProject.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.EduHomeProject.props",
+      "PackagePath": "build\\EduHomeProject.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.EduHomeProject.props",
+      "PackagePath": "buildMultiTargeting\\EduHomeProject.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.EduHomeProject.props",
+      "PackagePath": "buildTransitive\\EduHomeProject.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

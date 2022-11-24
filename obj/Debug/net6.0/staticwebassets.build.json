@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "Hash": "+i+YyqgiSie5YGgBriWZzfV62d5aGyhpvxab0waQPPw=",
+  "Source": "EduHomeProject",
+  "BasePath": "_content/EduHomeProject",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "EduHomeProject\\wwwroot",
+      "Source": "EduHomeProject",
+      "ContentRoot": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\",
+      "BasePath": "_content/EduHomeProject",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\obj\\Debug\\net6.0\\scopedcss\\bundle\\EduHomeProject.styles.css",
+      "SourceId": "EduHomeProject",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/EduHomeProject",
+      "RelativePath": "EduHomeProject.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\obj\\Debug\\net6.0\\scopedcss\\bundle\\EduHomeProject.styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\EduHomeProject.bundle.scp.css",
+      "SourceId": "EduHomeProject",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/EduHomeProject",
+      "RelativePath": "EduHomeProject.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\EduHomeProject.bundle.scp.css"
+    }
+  ]
+}
