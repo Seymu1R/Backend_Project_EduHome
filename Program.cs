@@ -1,5 +1,7 @@
 using EduHomeProject.DAL;
+using EduHomeProject.Data;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Metadata;
 
 namespace EduHomeProject
 {
@@ -14,6 +16,9 @@ namespace EduHomeProject
 
             builder.Services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            Constants.RootPath = builder.Environment.WebRootPath;
+            Constants.SliderImagePath = Path.Combine(Constants.RootPath, "admin", "assets", "img", "slider");
 
             var app = builder.Build();
 

@@ -1,11 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using EduHomeProject.DAL;
+using EduHomeProject.DAL.Entities;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace EduHomeProject.Areas.Admin.Controllers
 {
     public class DashBoardController : BaseController
-    {
-        public IActionResult Index()
-        {
+    {        
+        public async Task<IActionResult> Index()
+        {            
             return View();
         }
     }
