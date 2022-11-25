@@ -1,3 +1,6 @@
+using EduHomeProject.DAL;
+using Microsoft.EntityFrameworkCore;
+
 namespace EduHomeProject
 {
     public class Program
@@ -8,6 +11,9 @@ namespace EduHomeProject
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<AppDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             var app = builder.Build();
 
@@ -25,10 +31,18 @@ namespace EduHomeProject
             app.UseRouting();
 
             app.UseAuthorization();
-
-            app.MapControllerRoute(
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                  name: "areas",
+                  pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                );
+                endpoints.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+            });
+
+            
 
             app.Run();
         }
