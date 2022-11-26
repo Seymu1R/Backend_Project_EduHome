@@ -1,0 +1,129 @@
+﻿@model CreateTeacherViewModel
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"> EduHomeEdit /</span> Slider Tables <span> /Create </span></h4>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-4">
+                <h5 class="card-header">Default</h5>
+                <div class="card-body">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <form method="post" asp-action="Create" enctype="multipart/form-data">
+                        <div>
+                            <label asp-for="FullName" class="form-label">FulName</label>
+                            <input asp-for="FullName"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="FullName"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="FullName"></span>
+
+                        </div>
+                        <div>
+                            <label asp-for="Position" class="form-label">Position</label>
+                            <input asp-for="Position"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="Position"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="Position"></span>
+                        </div>
+                        <div>
+                            <label asp-for="AboutMe" class="form-label">AboutMe</label>
+                            <input asp-for="AboutMe"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="AboutMe"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="AboutMe"></span>
+
+                        </div>
+                        
+                        <div>
+                            <label asp-for="Degree" class="form-label">Degree</label>
+                            <input asp-for="Degree"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="Degree"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="Degree"></span>
+
+                        </div>
+                        <div>
+                            <label asp-for="Experience" class="form-label">Experience</label>
+                            <input asp-for="Experience"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="Experience"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="Experience"></span>
+
+                        </div>
+                        <div>
+                            <label asp-for="Hobbies" class="form-label">Hobbies</label>
+                            <input asp-for="Hobbies"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="Hobbies"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="Hobbies"></span>
+
+                        </div>
+                        <div>
+                            <label asp-for="Faculty" class="form-label">Faculty</label>
+                            <input asp-for="Faculty"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="Faculty"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="Faculty"></span>
+
+                        </div>
+                         <div>
+                            <label asp-for="Mail" class="form-label">Mail</label>
+                            <input asp-for="Mail"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="Mail"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="Mail"></span>
+
+                        </div>
+                        <div>
+                            <label asp-for="Phone" class="form-label">Phone</label>
+                            <input asp-for="Phone"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="Phone"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="Phone"></span>
+
+                        </div>
+                         <div>
+                            <label asp-for="SkypeAdress" class="form-label">SkypeAdress</label>
+                            <input asp-for="SkypeAdress"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="SkypeAdress"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="SkypeAdress"></span>
+
+                        </div>
+                        <div>
+                            <label asp-for="Image" class="form-label">Image</label>
+                            <input asp-for="Image"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="Image"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="Image"></span>
+
+                        </div>
+                        <button class="btn btn-success mt-5 "> Create  </button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

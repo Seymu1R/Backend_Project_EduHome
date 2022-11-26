@@ -4,5 +4,6 @@
     {
         public static string RootPath;
         public static string SliderImagePath;
+        public static string TeacherImagePath;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using EduHomeProject.DAL.Entities;
+using Microsoft.CodeAnalysis.Options;
 using Microsoft.EntityFrameworkCore;
 
 namespace EduHomeProject.DAL
@@ -11,6 +12,9 @@ namespace EduHomeProject.DAL
         }
 
         public DbSet<Slider> Sliders { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<TeacherSosialMedia> TeacherSosialMedias { get; set; }
+        public DbSet<TeacherSkill> TeacherSkills { get; set; }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {

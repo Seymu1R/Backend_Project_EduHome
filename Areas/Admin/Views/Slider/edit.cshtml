@@ -30,6 +30,16 @@
                             <span class="text-danger" asp-validation-for="Subtitle"></span>
                         </div>
                         <div>
+                            <label asp-for="Description" class="form-label">Description</label>
+                            <textarea asp-for="Description"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="Subtitle"
+                                   aria-describedby="defaultFormControlHelp"
+                                   value="@Model.Description"> </textarea>
+                            <span class="text-danger" asp-validation-for="Description"></span>
+                        </div>
+                        <div>
                             <label asp-for="Image" class="form-label">Image</label>
                             <input asp-for="Image"
                                    class="form-control"

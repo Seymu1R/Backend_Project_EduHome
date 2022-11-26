@@ -52,6 +52,7 @@ namespace EduHomeProject.Areas.Admin.Controllers
 
             slider.Title = model.Title;
             slider.SubTitle = model.Subtitle;
+            slider.Description= model.Description;
             slider.ImageUrl = unicalName;
 
             await _dbContext.Sliders.AddAsync(slider);
@@ -90,15 +91,15 @@ namespace EduHomeProject.Areas.Admin.Controllers
 
         public async Task<IActionResult> Edit(int id) 
         {
-            Slider slider = await _dbContext.Sliders.FindAsync(id);
+            if (id == null) return BadRequest();
 
-            string imagepath = Path.Combine(Constants.SliderImagePath, slider.ImageUrl);
+            Slider slider = await _dbContext.Sliders.FindAsync(id);           
 
             EditSliderViewModel slidermodel = new EditSliderViewModel
             {
                 Subtitle = slider.SubTitle,
                 Title = slider.Title,
-                ImageUrl = slider.ImageUrl,
+                Description=slider.Description,
                 Id = slider.Id
 
             };
@@ -119,6 +120,7 @@ namespace EduHomeProject.Areas.Admin.Controllers
             string unicalName = await model.Image.GenerateFile(Constants.SliderImagePath);
             editedslider.SubTitle = model.Subtitle;
             editedslider.Title = model.Subtitle;
+            editedslider.Description= model.Description;
             editedslider.ImageUrl = unicalName;           
 
             await _dbContext.SaveChangesAsync();
