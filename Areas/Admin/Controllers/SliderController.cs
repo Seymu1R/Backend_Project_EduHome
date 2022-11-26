@@ -3,6 +3,7 @@ using EduHomeProject.Areas.Admin.Models;
 using EduHomeProject.DAL;
 using EduHomeProject.DAL.Entities;
 using EduHomeProject.Data;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -68,11 +69,62 @@ namespace EduHomeProject.Areas.Admin.Controllers
         [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> Delete(int id)
         {
+            if (id == null) return BadRequest();
+
             Slider slider =await _dbContext.Sliders.FindAsync(id);
-            if (slider == null) return BadRequest();
+
+            if (slider == null) return NotFound();
+
+            string imagepath = Path.Combine(Constants.SliderImagePath, slider.ImageUrl);
+
+            if (System.IO.File.Exists(imagepath))
+            {
+                System.IO.File.Delete(imagepath);
+            }
             _dbContext.Sliders.Remove(slider);
+
             await _dbContext.SaveChangesAsync();
+
             return RedirectToAction(nameof(Delete));
         }
+
+        public async Task<IActionResult> Edit(int id) 
+        {
+            Slider slider = await _dbContext.Sliders.FindAsync(id);
+
+            string imagepath = Path.Combine(Constants.SliderImagePath, slider.ImageUrl);
+
+            EditSliderViewModel slidermodel = new EditSliderViewModel
+            {
+                Subtitle = slider.SubTitle,
+                Title = slider.Title,
+                ImageUrl = slider.ImageUrl,
+                Id = slider.Id
+
+            };
+            return View(slidermodel);
+        }
+        [HttpPost]
+        [AutoValidateAntiforgeryToken]
+        public async Task<IActionResult> Edit(int id,EditSliderViewModel model)
+        {
+            Slider editedslider = await _dbContext.Sliders.FindAsync(id);
+
+            string imagepath = Path.Combine(Constants.SliderImagePath, editedslider.ImageUrl);
+            if (System.IO.File.Exists(imagepath))
+            {
+                System.IO.File.Delete(imagepath);
+            }
+
+            string unicalName = await model.Image.GenerateFile(Constants.SliderImagePath);
+            editedslider.SubTitle = model.Subtitle;
+            editedslider.Title = model.Subtitle;
+            editedslider.ImageUrl = unicalName;           
+
+            await _dbContext.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XNHf9zTDPXvLq7u36CuCT/WH1Ir9MJHOxbrTrWMcNgg=",
+  "Hash": "eKfPQCirj1sQX7N0RGauMC5NnSGIoH11jeq4SigHw1g=",
   "Source": "EduHomeProject",
   "BasePath": "_content/EduHomeProject",
   "Mode": "Default",
@@ -814,6 +814,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\admin\\assets\\img\\layouts\\layout-without-navbar-light.png"
+    },
+    {
+      "Identity": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\slider\\22473f40-3ec4-407d-9bcb-54d784b083c5-banner-13.jpg",
+      "SourceId": "EduHomeProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\",
+      "BasePath": "_content/EduHomeProject",
+      "RelativePath": "admin/assets/img/slider/22473f40-3ec4-407d-9bcb-54d784b083c5-banner-13.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\assets\\img\\slider\\22473f40-3ec4-407d-9bcb-54d784b083c5-banner-13.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\slider\\66b9b09d-324a-4b6a-9838-cff8d162457b-category-2.jpg",
+      "SourceId": "EduHomeProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\",
+      "BasePath": "_content/EduHomeProject",
+      "RelativePath": "admin/assets/img/slider/66b9b09d-324a-4b6a-9838-cff8d162457b-category-2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\assets\\img\\slider\\66b9b09d-324a-4b6a-9838-cff8d162457b-category-2.jpg"
     },
     {
       "Identity": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\js\\config.js",

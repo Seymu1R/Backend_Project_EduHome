@@ -6,16 +6,18 @@
         <div class="card mb-4">
             <h5 class="card-header">Default</h5>
             <div class="card-body">
+                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <form method="post" asp-action="Create" enctype="multipart/form-data">
-                     <div>
+                   <div>
                     <label asp-for="Title" class="form-label">Title</label>
                     <input asp-for="Title"
                            class="form-control"
                            id="defaultFormControlInput"
                            placeholder="Title"
                            aria-describedby="defaultFormControlHelp" />
+                      <span  class="text-danger" asp-validation-for="Title"></span>
                    
-                         </div>
+                   </div>
                     <div>
                         <label asp-for="Subtitle" class="form-label">Subtitle</label>
                         <input asp-for="Subtitle"
@@ -23,7 +25,7 @@
                                id="defaultFormControlInput"
                                placeholder="Subtitle"
                                aria-describedby="defaultFormControlHelp" />
-
+                         <span class ="text-danger" asp-validation-for="Subtitle"></span>
                     </div>
                     <div>
                         <label asp-for="Image" class="form-label">Image</label>
@@ -32,6 +34,7 @@
                                id="defaultFormControlInput"
                                placeholder="Image"
                                aria-describedby="defaultFormControlHelp" />
+                         <span class="text-danger" asp-validation-for="Image"></span>
 
                     </div>
                     <button class="btn btn-success mt-5 " > Create  </button>
