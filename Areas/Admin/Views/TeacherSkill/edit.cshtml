@@ -1,0 +1,82 @@
+﻿@model EditTeacherSkillViewModel
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"> EduHomeEdit /</span> Slider Tables <span> /Edit </span></h4>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-4">
+                <h5 class="card-header">Default</h5>
+                <div class="card-body">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <form method="post" asp-action="Edit" enctype="multipart/form-data">
+                        <div>
+                            <label asp-for="Language" class="form-label">FulName</label>
+                            <input asp-for="Language"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="Language"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="Language"></span>
+
+                        </div>
+                        <div>
+                            <label asp-for="TeamLeader" class="form-label">TeamLeader</label>
+                            <input asp-for="TeamLeader"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="TeamLeader"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="TeamLeader"></span>
+                        </div>
+                        <div>
+                            <label asp-for="Development" class="form-label">Development</label>
+                            <input asp-for="Development"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="Development"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="Development"></span>
+
+                        </div>
+
+                        <div>
+                            <label asp-for="Design" class="form-label">Design</label>
+                            <input asp-for="Design"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="Design"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="Design"></span>
+
+                        </div>
+                        <div>
+                            <label asp-for="Innovation" class="form-label">Innovation</label>
+                            <input asp-for="Innovation"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="Innovation"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="Innovation"></span>
+
+                        </div>
+                        <div>
+                            <label asp-for="Communication" class="form-label">Communication</label>
+                            <input asp-for="Communication"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="Communication"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="Communication"></span>
+
+                        </div>                    
+
+                        <button type="submit" class="btn btn-success mt-5 "> Edit  </button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+

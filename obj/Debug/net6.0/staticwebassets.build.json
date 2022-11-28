@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3KFFZF9daUmvOtLvliO+aTHcGnXuQ624gQhOYEk0pGQ=",
+  "Hash": "I64Nq6+If5kyiEO7lcCFYqIKMM6CYUFF4cGPeywalVI=",
   "Source": "EduHomeProject",
   "BasePath": "_content/EduHomeProject",
   "Mode": "Default",
@@ -831,6 +831,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\admin\\assets\\img\\slider\\57c6c2aa-a8a1-486c-9476-9a7b8af6ad5d-slider-8.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\teacher\\ac291ab5-4f92-46ad-a3c5-a890ac9a4ccb-banner-9.jpg",
+      "SourceId": "EduHomeProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\",
+      "BasePath": "_content/EduHomeProject",
+      "RelativePath": "admin/assets/img/teacher/ac291ab5-4f92-46ad-a3c5-a890ac9a4ccb-banner-9.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\assets\\img\\teacher\\ac291ab5-4f92-46ad-a3c5-a890ac9a4ccb-banner-9.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\teacher\\dc89ce6d-c7ea-4062-b650-7f77b21edaad-bg-footer.jpg",
+      "SourceId": "EduHomeProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\",
+      "BasePath": "_content/EduHomeProject",
+      "RelativePath": "admin/assets/img/teacher/dc89ce6d-c7ea-4062-b650-7f77b21edaad-bg-footer.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\assets\\img\\teacher\\dc89ce6d-c7ea-4062-b650-7f77b21edaad-bg-footer.jpg"
     },
     {
       "Identity": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\js\\config.js",

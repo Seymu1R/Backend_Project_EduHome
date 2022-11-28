@@ -1,0 +1,70 @@
+﻿@model List<TeacherSkill>
+<!-- Content wrapper -->
+<div class="content-wrapper">
+    <!-- Content -->
+
+    <div class="container-xxl flex-grow-1 container-p-y">
+        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"> EduHomeEdit /</span> Teacher Tables</h4>
+
+        <!-- Basic Bootstrap Table -->
+        <div class="card">
+            <h5 class="card-header">Teacher Table<a asp-action="create" class=" btn btn-danger mx-5 "> Create Teacher </a></h5>
+            <div class="table-responsive text-nowrap">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th> Language</th>
+                            <th>TeamLeader</th>
+                            <th>Development</th>
+                            <th>Design</th>
+                            <th>Innovation</th>
+                            <th>Communication</th>
+                            <th>Teacher</th>                            
+                        </tr>
+                    </thead>
+                    @foreach (var teacherskil in Model)
+                    {
+                        <tbody class="table-border-bottom-0">
+                            <tr>
+                                <td>@teacherskil.Language</td>
+                                <td>@teacherskil.TeamLeader</td>                                
+                                <td>@teacherskil.Development</td>
+                                <td>@teacherskil.Design</td>
+                                <td>@teacherskil.Innovation</td>
+                                <td>@teacherskil.Communication</td>
+                                <td>@teacherskil.Teacher.FullName</td>
+
+                                <td>
+                                    <div class="dropdown">
+                                        <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                        </button>
+                                        <div class="dropdown-menu">
+
+                                            <a type="submit" class="dropdown-item" asp-action="Edit" asp-route-id="@teacherskil.Id"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+
+                                            <form method="post" asp-action="Delete">
+                                                <button type="submit" asp-action="Delete" asp-route-id="@teacherskil.Id" class="dropdown-item"><i class="bx bx-trash me-1"></i> Delete</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    }
+
+                </table>
+            </div>
+        </div>
+        <!--/ Basic Bootstrap Table -->
+
+
+    </div>
+    <!-- / Content -->
+    <!-- Footer -->
+
+
+
+</div>
+<!-- Content wrapper -->
