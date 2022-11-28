@@ -1,13 +1,15 @@
 ﻿@model EditSliderViewModel
+
 <div class="container-xxl flex-grow-1 container-p-y">
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"> EduHomeEdit /</span> Slider Tables <span> /Create </span></h4>
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"> EduHomeEdit /</span> Slider Tables <span> /Edit </span></h4>
     <div class="row">
         <div class="col-md-12">
             <div class="card mb-4">
                 <h5 class="card-header">Default</h5>
                 <div class="card-body">
-                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                    <form method="post" asp-action="Edit" asp-route-id="@Model.Id" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>                    
+                    <img  src="~/admin/assets/img/slider/@Model.ImageUrl" style="width:150px;height:150px;" />
+                    <form method="post" asp-action="Edit"  enctype="multipart/form-data">
                         <div>
                             <label asp-for="Title" class="form-label">Title</label>
                             <input asp-for="Title"
@@ -50,7 +52,7 @@
                             <span class="text-danger" asp-validation-for="Image"></span>
 
                         </div>
-                        <button class="btn btn-success mt-5 "> Edit  </button>
+                        <button type="submit"  class="btn btn-success mt-5 "> Edit  </button>
                     </form>
 
                 </div>

@@ -59,12 +59,7 @@ namespace EduHomeProject.Areas.Admin.Controllers
             await _dbContext.SaveChangesAsync();
 
             return RedirectToAction("Index");
-        }
-
-        public IActionResult Delete() 
-        {
-            return RedirectToAction(nameof(Index));
-        }
+        }      
 
         [HttpPost]
         [AutoValidateAntiforgeryToken]
@@ -86,32 +81,66 @@ namespace EduHomeProject.Areas.Admin.Controllers
 
             await _dbContext.SaveChangesAsync();
 
-            return RedirectToAction(nameof(Delete));
+            return RedirectToAction(nameof(Index));
         }
 
-        public async Task<IActionResult> Edit(int id) 
+        public async Task<IActionResult> Edit(int? id) 
         {
-            if (id == null) return BadRequest();
+            if (id is null) return BadRequest();          
 
-            Slider slider = await _dbContext.Sliders.FindAsync(id);           
+            Slider slider = await _dbContext.Sliders.FindAsync(id);  
+            
+            if(slider is null) return NotFound();   
 
             EditSliderViewModel slidermodel = new EditSliderViewModel
             {
                 Subtitle = slider.SubTitle,
                 Title = slider.Title,
                 Description=slider.Description,
-                Id = slider.Id
+                Id = slider.Id,
+                ImageUrl= slider.ImageUrl
 
             };
             return View(slidermodel);
         }
         [HttpPost]
         [AutoValidateAntiforgeryToken]
-        public async Task<IActionResult> Edit(int id,EditSliderViewModel model)
+        public async Task<IActionResult> Edit(int? id,EditSliderViewModel model)
         {
+            if (id == null) return NotFound();           
+
             Slider editedslider = await _dbContext.Sliders.FindAsync(id);
 
+            if (editedslider is null) return NotFound();            
+
+            if (editedslider.Id != id) return BadRequest();   
+            
+            EditSliderViewModel slidermodel = new EditSliderViewModel {
+                Subtitle= editedslider.SubTitle,
+                Title = editedslider.Title,
+                Description=editedslider.Description,
+                ImageUrl=editedslider.ImageUrl
+               
+            };
+            
+            if (!ModelState.IsValid)
+            {
+                return View(slidermodel);
+            }
+            if (!model.Image.IsAllowedSize(10))
+            {
+                ModelState.AddModelError("", "Şəklin Hecmi 10 mb- dan boyuk ola bilmez");
+                return View(slidermodel);
+            }
+            if (!model.Image.IsImage())
+            {
+                ModelState.AddModelError("", "Şəkil uyğun deyil");
+                return View(slidermodel);
+            }
+           
+
             string imagepath = Path.Combine(Constants.SliderImagePath, editedslider.ImageUrl);
+
             if (System.IO.File.Exists(imagepath))
             {
                 System.IO.File.Delete(imagepath);
@@ -127,6 +156,8 @@ namespace EduHomeProject.Areas.Admin.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+
+    
 
     }
 }
