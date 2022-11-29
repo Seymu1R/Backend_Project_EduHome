@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\admin\assets\img\course\" />
+    <Folder Include="wwwroot\admin\assets\img\event\" />
     <Folder Include="wwwroot\admin\assets\img\sosiallogo\" />
     <Folder Include="wwwroot\admin\assets\img\teacher\" />
     <Folder Include="wwwroot\admin\assets\img\slider\" />

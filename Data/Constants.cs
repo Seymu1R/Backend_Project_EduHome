@@ -7,5 +7,6 @@
         public static string TeacherImagePath;
         public static string TeacherSosialLogoPath;
         public static string CourseImagePath;
+        public static string EventImagePath;
     }
 }

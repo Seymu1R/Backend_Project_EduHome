@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Hlh1bU2rnPmy5WdXgCAiFYIz5ZZl8TYgZu6mUVp2AWM=",
+  "Hash": "ROpbKQlyqPC8k3Kp0p/D6nIw2nIDfu+2s3sX0yXcHMc=",
   "Source": "EduHomeProject",
   "BasePath": "_content/EduHomeProject",
   "Mode": "Default",
@@ -474,6 +474,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\admin\\assets\\img\\elements\\7.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\event\\388f240e-1099-454b-8016-254048fa5de9-banner-9.jpg",
+      "SourceId": "EduHomeProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\",
+      "BasePath": "_content/EduHomeProject",
+      "RelativePath": "admin/assets/img/event/388f240e-1099-454b-8016-254048fa5de9-banner-9.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\assets\\img\\event\\388f240e-1099-454b-8016-254048fa5de9-banner-9.jpg"
     },
     {
       "Identity": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\favicon\\favicon.ico",
