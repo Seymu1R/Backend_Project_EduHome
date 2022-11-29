@@ -1,0 +1,50 @@
+﻿@model List<Category>
+<!-- Content wrapper -->
+<div class="content-wrapper">
+    <!-- Content -->
+
+    <div class="container-xxl flex-grow-1 container-p-y">
+        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"> EduHomeEdit /</span> Slider Tables</h4>
+
+        <!-- Basic Bootstrap Table -->
+        <div class="card">
+            <h5 class="card-header">Slider Table<a asp-action="create" class=" btn btn-danger mx-5 "> Create Slide </a></h5>
+            <div class="table-responsive text-nowrap">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>IsDeleted</th>
+                           
+                        </tr>
+                    </thead>
+                    @foreach (var category in Model)
+                    {
+                        <tbody class="table-border-bottom-0">
+                            <tr>
+                                <td>@category.Name</td>
+                                <td>@category.IsDeleted</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                        </button>
+                                        <div class="dropdown-menu">
+
+                                            <a type="submit" class="dropdown-item" asp-action="Edit" asp-route-id="@category.Id"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+
+                                            <form method="post" asp-action="Delete">
+                                                <button type="submit" asp-action="Delete" asp-route-id="@category.Id" class="dropdown-item"><i class="bx bx-trash me-1"></i> Delete</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    }
+
+                </table>
+            </div>
+        </div>
+        <!--/ Basic Bootstrap Table -->

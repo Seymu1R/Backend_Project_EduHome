@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "I64Nq6+If5kyiEO7lcCFYqIKMM6CYUFF4cGPeywalVI=",
+  "Hash": "nbEzyYsX/pxlP2TGtXzBn3MAB0jLQShSEbz9uHegiiA=",
   "Source": "EduHomeProject",
   "BasePath": "_content/EduHomeProject",
   "Mode": "Default",
@@ -831,6 +831,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\admin\\assets\\img\\slider\\57c6c2aa-a8a1-486c-9476-9a7b8af6ad5d-slider-8.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\sosiallogo\\0b992138-88c0-460d-8c12-7cd8d94f7b18-banner-11.jpg",
+      "SourceId": "EduHomeProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\",
+      "BasePath": "_content/EduHomeProject",
+      "RelativePath": "admin/assets/img/sosiallogo/0b992138-88c0-460d-8c12-7cd8d94f7b18-banner-11.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\assets\\img\\sosiallogo\\0b992138-88c0-460d-8c12-7cd8d94f7b18-banner-11.jpg"
     },
     {
       "Identity": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\teacher\\ac291ab5-4f92-46ad-a3c5-a890ac9a4ccb-banner-9.jpg",

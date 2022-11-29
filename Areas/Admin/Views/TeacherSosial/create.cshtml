@@ -1,0 +1,52 @@
+﻿@model CreateTeacherSosialMediaViewModel
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"> EduHomeEdit /</span> Slider Tables <span> /Create </span></h4>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-4">
+                <h5 class="card-header">Default</h5>
+                <div class="card-body">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <form method="post" asp-action="Create" enctype="multipart/form-data">
+                        <div>
+                            <label asp-for="MediaLink" class="form-label">MediaLink</label>
+                            <input asp-for="MediaLink"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="MediaLink"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="MediaLink"></span>
+
+                        </div>
+                        <div>
+                            <label asp-for="MediaLogo" class="form-label">MediaLogo</label>
+                            <input asp-for="MediaLogo"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="MediaLogo"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="MediaLogo"></span>
+                        </div>
+                        
+                        <div>
+                            <label asp-for="TeacherId" class="form-label">Teachers</label>
+                            <select asp-for="TeacherId"
+                                    asp-items="@Model?.TeacherCategories"
+                                    class="form-control"
+                                    id="defaultFormControlInput"
+                                    aria-describedby="defaultFormControlHelp"></select>
+                            <span class="text-danger" asp-validation-for="TeacherId"></span>
+
+                        </div>
+
+                        <button class="btn btn-success mt-5 "> Create  </button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+

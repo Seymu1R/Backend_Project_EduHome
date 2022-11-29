@@ -69,7 +69,7 @@ namespace EduHomeProject.Areas.Admin.Controllers
             if (id == null) return BadRequest();
 
             Teacher teacher = await _dbContext.Teachers.FindAsync(id);
-
+           
             if (teacher == null)return NotFound();            
 
             EditTeacherViewModel teachermodel = new EditTeacherViewModel
@@ -94,7 +94,7 @@ namespace EduHomeProject.Areas.Admin.Controllers
         }
         [HttpPost]
         [AutoValidateAntiforgeryToken]
-        public async Task<IActionResult> Edit( int? id, CreateTeacherViewModel model)
+        public async Task<IActionResult> Edit( int? id, EditTeacherViewModel model)
         {
             if (id is null) return BadRequest();
 

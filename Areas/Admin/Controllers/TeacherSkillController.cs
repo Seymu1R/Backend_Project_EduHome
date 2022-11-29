@@ -42,7 +42,10 @@ namespace EduHomeProject.Areas.Admin.Controllers
         public async Task<IActionResult> Create(CreateTeacherSkillViewModel model)
         {
             TeacherSkill teacherskil = new TeacherSkill();
+
             Teacher teacher = _dbcontext.Teachers.Where(x => x.Id == model.TeacherId).SingleOrDefault();
+
+            if (teacher == null) return BadRequest();
 
             if (!ModelState.IsValid)
             {
