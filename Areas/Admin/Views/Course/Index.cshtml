@@ -1,0 +1,96 @@
+﻿@model List<Course>
+<!-- Content wrapper -->
+<div class="content-wrapper">
+    <!-- Content -->
+
+    <div class="container-xxl flex-grow-1 container-p-y">
+        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"> EduHomeEdit /</span> Teacher Tables</h4>
+
+        <!-- Basic Bootstrap Table -->
+        <div class="card">
+            <h5 class="card-header">Teacher Table<a asp-action="create" class=" btn btn-danger mx-5 "> Create Course </a></h5>
+            <div class="table-responsive text-nowrap">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Image</th>
+                            <th>Price</th>
+                            <th>HowToApply</th>
+                            <th>Certification</th>
+                            <th>StartTime</th>
+                            <th>Duration</th>
+                            <th>ClassDuration</th>
+                            <th>SkillLevel</th>
+                            <th>Language</th>
+                            <th>Students</th>
+                            <th>Assesment</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    @foreach (var course in Model)
+                    {
+                            <tbody class="table-border-bottom-0">
+                                <tr>
+                                <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>@course.Title</strong></td>
+                                <td>@course.Description</td>
+                                    <td>
+                                        <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+                                            <li data-bs-toggle="tooltip"
+                                        data-popup="tooltip-custom"
+                                        data-bs-placement="top"
+                                        class="avatar avatar-xs pull-up"
+                                        title="Lilian Fuller">
+                                            <img src="~/admin/assets/img/course/@course.ImageUrl" alt="Avatar" class="rounded-circle" />
+                                            </li>
+
+                                        </ul>
+                                    </td>
+                                    <td><span >@course.Price</span></td>
+                                    <td><span >@course.HowToApply</span></td>
+                                    <td><span >@course.Certification</span></td>
+                                    <td><span >@course.StartTime</span></td>
+                                    <td><span >@course.Duration</span></td>
+                                    <td><span >@course.ClassDuration</span></td>
+                                    <td><span >@course.SkillLevel</span></td>
+                                    <td><span >@course.Language</span></td>
+                                    <td><span >@course.Students</span></td>
+                                    <td><span>@course.Assesment</span></td>
+                                     <td><span>@course.Category.Name</span></td>
+
+                                    <td>
+                                        <div class="dropdown">
+                                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                                <i class="bx bx-dots-vertical-rounded"></i>
+                                            </button>
+                                            <div class="dropdown-menu">
+
+                                            <a type="submit" class="dropdown-item" asp-action="Edit" asp-route-id="@course.Id"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+
+                                                <form method="post" asp-action="Delete">
+                                                <button type="submit" asp-action="Delete" asp-route-id="@course.Id" class="dropdown-item"><i class="bx bx-trash me-1"></i> Delete</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                    }
+
+                </table>
+            </div>
+        </div>
+        <!--/ Basic Bootstrap Table -->
+
+
+    </div>
+    <!-- / Content -->
+    <!-- Footer -->
+
+
+
+</div>
+<!-- Content wrapper -->
+

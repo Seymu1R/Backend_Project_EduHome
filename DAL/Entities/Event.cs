@@ -5,6 +5,7 @@
         public string Title { get; set; }
         public string StartTime { get; set; }
         public string Duration { get; set; }
+        public string ImageUrl { get; set; }
         public string Location { get; set; }
         public string Content { get; set; }
         public Category Category { get; set; }

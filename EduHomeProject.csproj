@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="wwwroot\admin\assets\img\course\" />
     <Folder Include="wwwroot\admin\assets\img\sosiallogo\" />
     <Folder Include="wwwroot\admin\assets\img\teacher\" />
     <Folder Include="wwwroot\admin\assets\img\slider\" />

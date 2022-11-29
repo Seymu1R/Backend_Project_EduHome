@@ -7,6 +7,7 @@ namespace EduHomeProject.DAL.Entities
     {
         public string FullName { get; set; }
         public string Position { get; set; }
+        public string ImageUrl { get; set; }
         public ICollection<SpeakerEvent> SpeakerEvents { get; set; }
     }
 }

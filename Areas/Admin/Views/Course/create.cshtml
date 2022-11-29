@@ -1,0 +1,172 @@
+﻿@using EduHomeProject.Areas.Admin.Models.Course;
+@model CreateCourseViewModel
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"> EduHomeEdit /</span> Course Tables <span> /Create </span></h4>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-4">
+                <h5 class="card-header">Course Tables</h5>
+                <div class="card-body">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <form method="post" asp-action="Create" enctype="multipart/form-data">
+                        <div>
+                            <label asp-for="Title" class="form-label">Title</label>
+                            <input asp-for="Title"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="Title"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="Title"></span>
+
+                        </div>
+                        <div>
+                            <label asp-for="Description" class="form-label">Description</label>
+                            <input asp-for="Description"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="Description"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="Description"></span>
+                        </div>
+                        <div>
+                            <label asp-for="Price" class="form-label">Price</label>
+                            <input asp-for="Price"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="Price"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="Price"></span>
+
+                        </div>
+
+                        <div>
+                            <label asp-for="About" class="form-label">About</label>
+                            <input asp-for="About"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="About"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="About"></span>
+
+                        </div>
+                        <div>
+                            <label asp-for="HowToApply" class="form-label">HowToApply</label>
+                            <input asp-for="HowToApply"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="HowToApply"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="HowToApply"></span>
+
+                        </div>
+                        <div>
+                            <label asp-for="Certification" class="form-label">Certification</label>
+                            <input asp-for="Certification"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="Certification"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="Certification"></span>
+
+                        </div>
+                        <div>
+                            <label asp-for="StartTime" class="form-label">StartTime</label>
+                            <input asp-for="StartTime"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="StartTime"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="StartTime"></span>
+
+                        </div>
+                        <div>
+                            <label asp-for="Duration" class="form-label">Duration</label>
+                            <input asp-for="Duration"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="Duration"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="Duration"></span>
+
+                        </div>
+                        <div>
+                            <label asp-for="ClassDuration" class="form-label">ClassDuration</label>
+                            <input asp-for="ClassDuration"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="ClassDuration"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="ClassDuration"></span>
+
+                        </div>
+                        <div>
+                            <label asp-for="SkillLevel" class="form-label">SkillLevel</label>
+                            <input asp-for="SkillLevel"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="SkillLevel"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="SkillLevel"></span>
+
+                        </div>
+                         <div>
+                            <label asp-for="Language" class="form-label">Language</label>
+                            <input asp-for="Language"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="Language"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="Language"></span>
+
+                        </div>
+                         <div>
+                            <label asp-for="Students" class="form-label">Students</label>
+                            <input asp-for="Students"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="Students"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="Students"></span>
+
+                        </div>
+                        <div>
+                            <label asp-for="Assesment" class="form-label">Assesment</label>
+                            <input asp-for="Assesment"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="Assesment"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="Assesment"></span>
+
+                        </div>
+                        <div>
+                            <label asp-for="Image" class="form-label">Image</label>
+                            <input asp-for="Image"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="Image"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="Image"></span>
+
+                        </div>
+                        <div>
+                            <label asp-for="CategoryId" class="form-label">Categories</label>
+                            <select asp-for="CategoryId"
+                                    asp-items="@Model?.CategoryList"
+                                    class="form-control"
+                                    id="defaultFormControlInput"
+                                    aria-describedby="defaultFormControlHelp"></select>
+                            <span class="text-danger" asp-validation-for="CategoryId"></span>
+
+                        </div>
+                       
+
+                        <button type="submit" class="btn btn-success mt-5 "> Create  </button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
