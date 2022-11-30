@@ -8,5 +8,7 @@
         public static string TeacherSosialLogoPath;
         public static string CourseImagePath;
         public static string EventImagePath;
+        public static string BlogImagePath;
+        public static string SpeakerImagePath;
     }
 }

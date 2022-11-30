@@ -1,4 +1,5 @@
 ﻿using EduHomeProject.Areas.Admin.Data;
+using EduHomeProject.Areas.Admin.Models.Blog;
 using EduHomeProject.Areas.Admin.Models.Course;
 using EduHomeProject.Areas.Admin.Models.Event;
 using EduHomeProject.DAL;
@@ -7,35 +8,36 @@ using EduHomeProject.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using NuGet.DependencyResolver;
 
 namespace EduHomeProject.Areas.Admin.Controllers
 {
-    public class EventController : BaseController
+    public class BlogController :BaseController
     {
-        private readonly AppDbContext _dbcontext;
+        private readonly AppDbContext _dbContext; 
 
-        public EventController(AppDbContext dbcontext)
+        public BlogController(AppDbContext dbContext)
         {
-            _dbcontext = dbcontext;
+            _dbContext = dbContext;
         }
 
         public async Task<IActionResult> Index()
         {
-            List<Event> eventlist = await _dbcontext.Events.Include(c=>c.Category).ToListAsync();
-            return View(eventlist);
+            List<Blog> blogs = await _dbContext.Blogs.Include(C => C.Category).ToListAsync();
+            return View(blogs);
         }
-        public async Task<IActionResult> Create()
+        public async Task<IActionResult> Create() 
         {
-            List<Category> categories = await _dbcontext.Categories.ToListAsync();
+            List<Category> categories = await _dbContext.Categories.ToListAsync();
 
             var categoryListItems = new List<SelectListItem>
             {
                 new SelectListItem("--Select Category--", "0")
             };
 
-           categories.ForEach(category => categoryListItems.Add(new SelectListItem(category.Name , category.Id.ToString())));
-           CreateEventModelView viewmodel = new CreateEventModelView
-           {
+            categories.ForEach(category => categoryListItems.Add(new SelectListItem(category.Name, category.Id.ToString())));
+            CreateBlogViewModel viewmodel = new CreateBlogViewModel
+            {
                 CategoryList = categoryListItems
             };
 
@@ -43,11 +45,11 @@ namespace EduHomeProject.Areas.Admin.Controllers
         }
         [HttpPost]
         [AutoValidateAntiforgeryToken]
-        public async Task<IActionResult> Create(CreateEventModelView model)
+        public async Task<IActionResult> Create(CreateBlogViewModel model)
         {
-            Event eventitem = new Event();
+            Blog blog = new Blog();
 
-            Category category = await _dbcontext.Categories.Where(cate => cate.Id == model.CategoryId).SingleOrDefaultAsync();
+            Category category = await _dbContext.Categories.Where(cate => cate.Id == model.CategoryId).SingleOrDefaultAsync();
 
             if (!ModelState.IsValid)
             {
@@ -63,18 +65,15 @@ namespace EduHomeProject.Areas.Admin.Controllers
                 ModelState.AddModelError("", "Şəkil uyğun deyil");
                 return View();
             }
-            string unicalName = await model.Image.GenerateFile(Constants.EventImagePath);
+            string unicalName = await model.Image.GenerateFile(Constants.BlogImagePath);
 
-            eventitem.Duration = model.Duration;
-            eventitem.Location = model.Location;
-            eventitem.Content = model.Content;
-            eventitem.Title= model.Title;
-            eventitem.StartTime= model.StartTime;
-            eventitem.ImageUrl = unicalName;
-            eventitem.Category = category; 
+            blog.Title = model.Title;
+            blog.Content = model.Content;
+            blog.Category = category;
+            blog.ImageUrl = unicalName;
 
-            await _dbcontext.Events.AddAsync(eventitem);
-            await _dbcontext.SaveChangesAsync();
+            await _dbContext.Blogs.AddAsync(blog);
+            await _dbContext.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
         }
@@ -82,8 +81,8 @@ namespace EduHomeProject.Areas.Admin.Controllers
         {
             if (id is null) return BadRequest();
 
-            Event eventitem = await _dbcontext.Events.FindAsync(id);
-            List<Category> categories = await _dbcontext.Categories.ToListAsync();
+            Blog blog = await _dbContext.Blogs.FindAsync(id);
+            List<Category> categories = await _dbContext.Categories.ToListAsync();
 
             var categoryListItems = new List<SelectListItem>
             {
@@ -92,31 +91,28 @@ namespace EduHomeProject.Areas.Admin.Controllers
 
             categories.ForEach(category => categoryListItems.Add(new SelectListItem(category.Name, category.Id.ToString())));
 
-            CreateEventModelView coursemodel = new CreateEventModelView
+            CreateBlogViewModel blogmodel = new CreateBlogViewModel
             {
-                Title = eventitem.Title,
-                StartTime= eventitem.StartTime,
-                Duration= eventitem.Duration,
-                Location = eventitem.Location,
-                Content = eventitem.Content,
+                Title = blog.Title,
+                Content=blog.Content,               
                 CategoryList = categoryListItems,
 
             };
 
-            return View(coursemodel);
+            return View(blogmodel);
         }
         [HttpPost]
         [AutoValidateAntiforgeryToken]
-        public async Task<IActionResult> Edit(int? id, CreateEventModelView model)
+        public async Task<IActionResult> Edit(int? id, CreateBlogViewModel model)
         {
             if (id is null) return BadRequest();
 
-            Event eventitem = await _dbcontext.Events.FindAsync(id);
+            Blog blog = await _dbContext.Blogs.FindAsync(id);
 
-            Category category = await _dbcontext.Categories.FindAsync(model.CategoryId);
+            Category category = await _dbContext.Categories.FindAsync(model.CategoryId);
 
 
-            List<Category> categories = await _dbcontext.Categories.ToListAsync();
+            List<Category> categories = await _dbContext.Categories.ToListAsync();
 
             var categoryListItems = new List<SelectListItem>
             {
@@ -125,7 +121,7 @@ namespace EduHomeProject.Areas.Admin.Controllers
 
             categories.ForEach(category => categoryListItems.Add(new SelectListItem(category.Name, category.Id.ToString())));
 
-            CreateEventModelView eventemodel = new CreateEventModelView
+            CreateBlogViewModel eventemodel = new CreateBlogViewModel
             {
                 CategoryList = categoryListItems
             };
@@ -144,40 +140,39 @@ namespace EduHomeProject.Areas.Admin.Controllers
                 ModelState.AddModelError("", "Şəkil uyğun deyil");
                 return View(eventemodel);
             }
-            string imagepath = Path.Combine(Constants.CourseImagePath, eventitem.ImageUrl);
+            string imagepath = Path.Combine(Constants.BlogImagePath, blog.ImageUrl);
 
             if (System.IO.File.Exists(imagepath))
             {
                 System.IO.File.Delete(imagepath);
             }
-            string unicalName = await model.Image.GenerateFile(Constants.CourseImagePath);
+            string unicalName = await model.Image.GenerateFile(Constants.BlogImagePath);
 
-            eventitem.Duration = model.Duration;
-            eventitem.Location = model.Location;
-            eventitem.Category = category;
-            eventitem.ImageUrl = unicalName;
-            eventitem.Content = model.Content;
-            eventitem.StartTime = model.StartTime;
-            eventitem.Title = model.Title;
+           
+            blog.Category = category;
+            blog.ImageUrl = unicalName;
+            blog.Content = model.Content;
+            blog.Title = model.Title;
 
-            await _dbcontext.SaveChangesAsync();
+            await _dbContext.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
         public async Task<IActionResult> Delete(int id)
         {
-            Event eventitem = await _dbcontext.Events.FindAsync(id);
-            if (eventitem == null) return NotFound();
+            Blog blog = await _dbContext.Blogs.FindAsync(id);
+            if (blog == null) return NotFound();
 
-            string imagepath = Path.Combine(Constants.EventImagePath, eventitem.ImageUrl);
+            string imagepath = Path.Combine(Constants.BlogImagePath, blog.ImageUrl);
 
             if (System.IO.File.Exists(imagepath))
             {
                 System.IO.File.Delete(imagepath);
             }
+            
 
-            _dbcontext.Events.Remove(eventitem);
+            _dbContext.Blogs.Remove(blog);
 
-            await _dbcontext.SaveChangesAsync();
+            await _dbContext.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
         }

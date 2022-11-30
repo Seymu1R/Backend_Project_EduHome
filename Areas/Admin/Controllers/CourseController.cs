@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using NuGet.DependencyResolver;
+using System.Reflection.Metadata;
 
 namespace EduHomeProject.Areas.Admin.Controllers
 {
@@ -191,6 +192,13 @@ namespace EduHomeProject.Areas.Admin.Controllers
         {
             Course course = await _dbcontext.Courses.FindAsync(id);
             if (course == null) return NotFound();
+
+            string imagepath = Path.Combine(Constants.CourseImagePath, course.ImageUrl);
+
+            if (System.IO.File.Exists(imagepath))
+            {
+                System.IO.File.Delete(imagepath);
+            }
 
             _dbcontext.Courses.Remove(course);
 

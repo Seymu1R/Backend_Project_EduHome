@@ -23,6 +23,8 @@ namespace EduHomeProject
             Constants.TeacherSosialLogoPath = Path.Combine(Constants.RootPath, "admin", "assets", "img", "sosiallogo");
             Constants.CourseImagePath= Path.Combine(Constants.RootPath, "admin", "assets", "img", "course");
             Constants.EventImagePath = Path.Combine(Constants.RootPath, "admin", "assets", "img", "event");
+            Constants.BlogImagePath = Path.Combine(Constants.RootPath, "admin", "assets", "img", "blog");
+            Constants.SpeakerImagePath = Path.Combine(Constants.RootPath, "admin", "assets", "img", "speaker");
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

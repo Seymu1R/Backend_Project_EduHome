@@ -1,0 +1,39 @@
+﻿@using EduHomeProject.Areas.Admin.Models.SpeakerEvent;
+@model SpeakerEventCreateModelView;
+
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"> EduHomeEdit /</span> Course SpeakerEvent <span> /Create </span></h4>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-4">
+                <h5 class="card-header">Course Tables</h5>
+                <div class="card-body">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <form method="post" asp-action="Create" enctype="multipart/form-data">                       
+                        <div>
+                            <label asp-for="SpeakerId" class="form-label">Speakers</label>
+                            <select asp-for="SpeakerId"
+                                    asp-items="@Model?.SpeakerList"
+                                    class="form-control"
+                                    id="defaultFormControlInput"
+                                    aria-describedby="defaultFormControlHelp"></select>
+                            <span class="text-danger" asp-validation-for="SpeakerId"></span>
+                        </div>
+                        <div>
+                            <label asp-for="EventId" class="form-label">Events</label>
+                            <select asp-for="EventId"
+                                    asp-items="@Model?.EventList"
+                                    class="form-control"
+                                    id="defaultFormControlInput"
+                                    aria-describedby="defaultFormControlHelp"></select>
+                            <span class="text-danger" asp-validation-for="EventId"></span>
+                        </div>
+                        <button type="submit" class="btn btn-success mt-5 "> Create  </button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
