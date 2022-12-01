@@ -144,13 +144,13 @@ namespace EduHomeProject.Areas.Admin.Controllers
                 ModelState.AddModelError("", "Şəkil uyğun deyil");
                 return View(eventemodel);
             }
-            string imagepath = Path.Combine(Constants.CourseImagePath, eventitem.ImageUrl);
+            string imagepath = Path.Combine(Constants.EventImagePath, eventitem.ImageUrl);
 
             if (System.IO.File.Exists(imagepath))
             {
                 System.IO.File.Delete(imagepath);
             }
-            string unicalName = await model.Image.GenerateFile(Constants.CourseImagePath);
+            string unicalName = await model.Image.GenerateFile(Constants.EventImagePath);
 
             eventitem.Duration = model.Duration;
             eventitem.Location = model.Location;

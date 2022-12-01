@@ -41,8 +41,16 @@
       "PackagePath": "staticwebassets\\admin\\assets\\img\\course\\07f8474a-2814-4c23-a836-5cd045f4076f-favicon.png"
     },
     {
+      "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\course\\1a74b538-cb0e-49d0-8451-d9d9d72aa48d-banner-12.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\course\\1a74b538-cb0e-49d0-8451-d9d9d72aa48d-banner-12.jpg"
+    },
+    {
       "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\course\\508c5061-e19f-4ba6-b37c-f5b34a2c8a22-blog-2.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\img\\course\\508c5061-e19f-4ba6-b37c-f5b34a2c8a22-blog-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\course\\6b13d3c2-358c-4b6c-87ba-c9d4f464964e-banner-12.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\course\\6b13d3c2-358c-4b6c-87ba-c9d4f464964e-banner-12.jpg"
     },
     {
       "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\course\\6c195dc3-7898-4e14-ad63-3f1d148bcd4a-icon-2.png",
@@ -55,6 +63,10 @@
     {
       "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\course\\a6a6bb3b-b63d-4665-a656-fd3cd1342744-banner-10.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\img\\course\\a6a6bb3b-b63d-4665-a656-fd3cd1342744-banner-10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\course\\b4bed590-8f68-4318-aa1a-a910564ac2cd-banner-11.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\course\\b4bed590-8f68-4318-aa1a-a910564ac2cd-banner-11.jpg"
     },
     {
       "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\course\\b8fdc9d2-8b53-453f-9f20-6290d84ca0b8-banner-9.jpg",
@@ -131,6 +143,14 @@
     {
       "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\event\\80daee0f-9cee-4275-9ea1-836f78d842c4-banner-13.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\img\\event\\80daee0f-9cee-4275-9ea1-836f78d842c4-banner-13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\event\\d41af5cb-ee24-4697-8ab9-e92202d973bf-bg-footer.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\event\\d41af5cb-ee24-4697-8ab9-e92202d973bf-bg-footer.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\event\\d7a5b095-ef91-4406-a600-21fca2536592-banner-12.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\event\\d7a5b095-ef91-4406-a600-21fca2536592-banner-12.jpg"
     },
     {
       "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\favicon\\favicon.ico",
@@ -245,16 +265,16 @@
       "PackagePath": "staticwebassets\\admin\\assets\\img\\sosiallogo\\0b992138-88c0-460d-8c12-7cd8d94f7b18-banner-11.jpg"
     },
     {
-      "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\speaker\\a2fac1e0-c8c0-445a-a1e4-6ef481fadd13-author-1.png",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\speaker\\a2fac1e0-c8c0-445a-a1e4-6ef481fadd13-author-1.png"
+      "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\speaker\\1859914e-710a-448d-8596-287c4f8ee488-author-1.png",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\speaker\\1859914e-710a-448d-8596-287c4f8ee488-author-1.png"
+    },
+    {
+      "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\speaker\\74d384d4-20f4-4252-b04d-3fde399debd9-icon-1.png",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\speaker\\74d384d4-20f4-4252-b04d-3fde399debd9-icon-1.png"
     },
     {
       "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\speaker\\de0b69ad-c739-45ee-a118-6df6cc6e5969-banner-10.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\img\\speaker\\de0b69ad-c739-45ee-a118-6df6cc6e5969-banner-10.jpg"
-    },
-    {
-      "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\speaker\\ec423d2f-0755-4e2b-9d7d-b9fbbd2f22b7-icon-2.png",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\speaker\\ec423d2f-0755-4e2b-9d7d-b9fbbd2f22b7-icon-2.png"
     },
     {
       "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\teacher\\ac291ab5-4f92-46ad-a3c5-a890ac9a4ccb-banner-9.jpg",
