@@ -27,12 +27,30 @@
 <body>
     <!-- Header Area Start -->
     <header class="top">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-8 col-xs-12">
+                        <div class="header-top-left">
+                            <p>HAVE ANY QUESTION ?  +880 5698  598  6587</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="header-top-right text-right">
+                            <ul>
+                                <li><a asp-controller="Login" asp-action="Index" >login</a></li>                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="header-area header-sticky fixed">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-3 col-xs-6">
                         <div class="logo">
-                            <a href="index.html"><img src="~/assets/img/logo/logo.png" alt="eduhome" /></a>
+                            <a asp-controller="Home" asp-action="Index" ><img src="~/assets/img/logo/logo.png" alt="eduhome" /></a>
                         </div>
                     </div>
                     <div class="col-md-9 col-sm-9 col-xs-12">
@@ -42,47 +60,27 @@
                                 <nav>
                                     <ul>
                                         <li>
-                                            <a href="index.html">Home</a>
-                                            <ul>
-                                                <li><a href="index.html">Home One</a></li>
-                                                <li><a href="index-2.html">Home Two</a></li>
-                                                <li><a href="index-3.html">Home Three</a></li>
-                                                <li><a href="index-4.html">Home Four</a></li>
-                                                <li><a href="index-5.html">Home Five</a></li>
-                                            </ul>
+                                            <a asp-controller="Home" asp-action="Index">Home</a>                                            
                                         </li>
-                                        <li><a href="about.html">About</a></li>
+                                        <li><a asp-controller="About" asp-action="Index" >About</a></li>
                                         <li>
                                             <a asp-controller="Course" asp-action="Index">courses</a>
-                                            <ul>
-                                                <li><a asp-controller="Course" asp-action="Index">courses</a></li>                                                
-                                            </ul>
+                                            
                                         </li>
                                         <li>
                                             <a asp-controller="Event" asp-action="Index" >event</a>
-                                            <ul>
-                                                <li> <a asp-controller="Event" asp-action="Index">event</a></li>
-                                                
-                                            </ul>
-                                        </li>
-                                        <li class="hidden-sm">
-                                            <a href="teacher.html">teacher</a>
-                                            <ul>
-                                                <li><a href="teacher.html">teacher</a></li>
-                                                <li><a href="teacher-details.html">teacher details</a></li>
-                                            </ul>
+                                            
                                         </li>
                                         <li>
-                                            <a href="blog.html">blog</a>
-                                            <ul>
-                                                <li><a href="blog.html">blog</a></li>
-                                                <li><a href="blog-left-side-bar.html">blog left sidebar</a></li>
-                                                <li><a href="blog-right-side-bar.html">blog righ sidebar</a></li>
-                                                <li><a href="blog-details.html">blog details</a></li>
-                                            </ul>
+                                            <a asp-controller="Teacher" asp-action="Index" >teacher</a>
+                                            
                                         </li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                        <li><a href="#">Buy Now</a>
+                                        <li>
+                                            <a asp-controller="Blog" asp-action="Index">blog</a>
+                                            
+                                        </li>
+                                        <li><a asp-controller="Contact" asp-action="Index" >Contact</a></li>
+                                        
                                     </ul>
                                 </nav>
                             </div>

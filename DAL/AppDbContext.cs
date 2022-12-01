@@ -21,6 +21,11 @@ namespace EduHomeProject.DAL
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Course> Courses { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<UseFullLink> UseFullLinks { get; set; }
+        public DbSet<Information> Informations { get; set; }
+        public DbSet<HeaderLogo> HeaderLogos { get; set; }
+        public DbSet<GetInTouch> GetInTouches { get; set; }
+        public DbSet<FooterLeftSide> FooterLeftSides { get; set; }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {

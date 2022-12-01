@@ -1,5 +1,4 @@
-﻿@model List<Course> ;
-<!-- Course Start -->
+﻿@model List<Blog>;
 <!-- Banner Area Start -->
 <div class="banner-area-wrapper">
     <div class="banner-area text-center">
@@ -8,7 +7,7 @@
                 <div class="col-xs-12">
                     <div class="banner-content-wrapper">
                         <div class="banner-content">
-                            <h2>courses</h2>
+                            <h2>blog</h2>
                         </div>
                     </div>
                 </div>
@@ -17,49 +16,47 @@
     </div>
 </div>
 <!-- Banner Area End -->
-<div class="course-area pt-150 pb-150">
+<!-- Blog Start -->
+<div class="blog-area pt-150 pb-150">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12">
-                <div class="course-title">
-                    <h3>search courses</h3>
-                </div>
-                <div class="course-form">
-                    <form id="search" action="#">
-                        <input type="search" placeholder="Search..." name="search" />
-                        <button type="submit">search</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            @foreach (var course in Model)
+            @foreach (var blog in Model)
             {
                 <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="single-course mb-70">
-                        <div class="course-img">
-                            <a asp-action="Detail" asp-route-id="@course.Id">
-                                <img src="~/admin/assets/img/course/@course.ImageUrl" alt="course">
-                                <div class="course-hover">
-                                    <i class="fa fa-link"></i>
-                                </div>
-                            </a>
+                    <div class="single-blog mb-60">
+                        <div class="blog-img">
+                            <a href="#"><img src="~/admin/assets/img/blog/@blog.ImageUrl" alt="blog"></a>
+                            <div class="blog-hover">
+                                <i class="fa fa-link"></i>
+                            </div>
                         </div>
-                        <div class="course-content">
-                            <h3><a asp-action="Detail" asp-route-id="@course.Id">@course.Title</a></h3>
-                            <p>@course.Description</p>
-                            <a class="default-btn" asp-action="Detail" asp-route-id="@course.Id">read more</a>
+                        <div class="blog-content">
+                            <div class="blog-top">
+                                <p>By Alex  /  @blog.CreatedDate  /  <i class="fa fa-comments-o"></i> 4</p>
+                            </div>
+                            <div class="blog-bottom">
+                                <h2><a href="blog-details.html">@blog.Content </a></h2>
+                                <a asp-action="Detail" asp-route-id="@blog.Id">read more</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            }  
-               
-                   
-           
+            }
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="pagination">
+                    <ul>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-<!-- Course End -->
+<!-- Blog End -->
 <!-- Subscribe Start -->
 <div class="subscribe-area pt-60 pb-70">
     <div class="container">

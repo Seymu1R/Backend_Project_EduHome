@@ -1,9 +1,10 @@
-﻿ @model CourseViewModel
+﻿ @model BlogViewModel
 @{
-    Course Course = Model.Course;
-    List<Category> categorylist = Model.Categories;
-}
-<!-- Banner Area Start -->
+    Blog blog = Model.Blog;
+    var categories = Model.categories;
+};
+ 
+       <!-- Banner Area Start -->
 <div class="banner-area-wrapper">
     <div class="banner-area text-center">
         <div class="container">
@@ -11,7 +12,7 @@
                 <div class="col-xs-12">
                     <div class="banner-content-wrapper">
                         <div class="banner-content">
-                            <h2>courses details</h2>
+                            <h2>blog details</h2>
                         </div>
                     </div>
                 </div>
@@ -21,49 +22,22 @@
 </div>
 <!-- Banner Area End -->
 <!-- Blog Start -->
-<div class="courses-details-area blog-area pt-150 pb-140">
+<div class="blog-details-area pt-150 pb-140">
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <div class="courses-details">
-                    <div class="courses-details-img">
-                        <img src="~/admin//assets/img/course/@Course.ImageUrl" alt="courses-details">
+                <div class="blog-details">
+                    <div class="blog-details-img">
+                        <img src="~/admin/assets/img/blog/@blog.ImageUrl" alt="blog-details">
                     </div>
-                    <div class="course-details-content">
-                        <h2>@Course.Title</h2>
-                        <p>@Course.Description </p>
-                        <div class="course-details-left">
-                            <div class="single-course-left">
-                                <h3>about course</h3>
-                                <p>@Course.About</p>
-                            </div>
-                            <div class="single-course-left">
-                                <h3>how to apply</h3>
-                                <p>@Course.HowToApply</p>
-                            </div>
-                            <div class="single-course-left">
-                                <h3>certification</h3>
-                                <p class="margin">@Course.Certification</p>
-                                <p>I must explain to you how all this a mistaken idea of ncing great explorer of the rut the is lder of human</p>
-                            </div>
-                        </div>
-                        <div class="course-details-right">
-                            <h3>COURSE FEATURES</h3>
-                            <ul>
-                                <li>starts <span>@Course.StartTime</span></li>
-                                <li>duration <span>@Course.Duration</span></li>
-                                <li>class duration <span>@Course.ClassDuration</span></li>
-                                <li>skill level <span>@Course.SkillLevel</span></li>
-                                <li>language <span>@Course.Language</span></li>
-                                <li>students <span>@Course.Students</span></li>
-                                <li>assesments <span>@Course.Assesment</span></li>
-                            </ul>
-                            <h3 class="red">course fee $@Course.Price</h3>
-                        </div>
+                    <div class="blog-details-content">
+                        <h2>@blog.Title </h2>
+                        <h6>By Alex  /  @blog.CreatedDate  /  <i class="fa fa-comments-o"></i> 4</h6>
+                        <p>@blog.Content </p>
+                        
                     </div>
                     <div class="reply-area">
-                        <h3>LEAVE A REPLY</h3>
-                        <p>I must explain to you how all this a mistaken idea of ncing great explorer of the rut<br> the is lder of human happinescias unde omnis iste natus error sit volptatem </p>
+                        <h3>LEAVE A REPLY</h3>                       
                         <form id="contact-form" action="http://demo.devitems.com/eduhome/mail.php" method="post">
                             <div class="row">
                                 <div class="col-md-12">
@@ -89,7 +63,7 @@
             </div>
             <div class="col-md-4">
                 <div class="blog-sidebar right">
-                    <div class="single-blog-widget mb-50">
+                    <div class="single-blog-widget mb-47">
                         <h3>search</h3>
                         <div class="blog-search">
                             <form id="search" action="#">
@@ -100,17 +74,17 @@
                             </form>
                         </div>
                     </div>
-                    <div class="single-blog-widget mb-50">
+                    <div class="single-blog-widget mb-47">
                         <h3>categories</h3>
                         <ul>
-                            @foreach (var item in categorylist)
+                            @foreach (var category in categories)
                             {
-                                <li><a asp-action="CategoryDetail" asp-route-id="@item.Id" >@item.Name</a></li>
-                            }                          
-                           
+                                <li><a asp-action="DetailCategory" asp-route-id="@category.Id" >@category.Name</a></li>
+                            }              
+                                                       
                         </ul>
                     </div>
-                    <div class="single-blog-widget mb-50">
+                    <div class="single-blog-widget mb-47">
                         <div class="single-blog-banner">
                             <a href="blog-details.html" id="blog"><img src="~/assets/img/blog/blog-img.jpg" alt="blog"></a>
                             <h2>best<br> eductaion<br> theme</h2>
@@ -165,3 +139,4 @@
     </div>
 </div>
 <!-- Subscribe End -->
+<!-- Footer Start -->

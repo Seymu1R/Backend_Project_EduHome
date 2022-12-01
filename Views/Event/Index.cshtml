@@ -25,24 +25,24 @@
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="single-event mb-60">
                         <div class="event-img">
-                            <a href="event-details.html">
+                            <a asp-action="detail" asp-route-id="@eventitem.Id">
                                 <img src="~/admin/assets/img/event/@eventitem.ImageUrl" alt="event">
                                 <div class="course-hover">
                                     <i class="fa fa-link"></i>
                                 </div>
                             </a>
                             <div class="event-date">
-                                <h3>20 <span>jun</span></h3>
+                                <h3>@eventitem.CreatedDate.Day<span>/ @eventitem.CreatedDate.Month</span></h3>
                             </div>
                         </div>
                         <div class="event-content text-left">
                             <h4><a asp-action="detail" asp-route-id="@eventitem.Id" >@eventitem.Title</a></h4>
                             <ul>
-                                <li><span>time:</span> @eventitem.StartTime</li>
+                                <li><span>time:</span> @eventitem.Duration</li>
                                 <li><span>venue</span> @eventitem.Location</li>
                             </ul>
                             <div class="event-content-right">
-                                <a class="default-btn" href="event-details.html">join now</a>
+                                <a class="default-btn" asp-action="detail" asp-route-id="@eventitem.Id">join now</a>
                             </div>
                         </div>
                     </div>

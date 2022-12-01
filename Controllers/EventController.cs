@@ -34,5 +34,13 @@ namespace EduHomeProject.Controllers
             };
             return View(viewmodel);
         }
+        public async Task<IActionResult> CategoryDetail(int? id)
+        {
+            if (id is null) return BadRequest();
+            Category category = await dbcontext.Categories.FindAsync(id);
+            if (category == null) return NotFound();
+            List<Event> events = await dbcontext.Events.Where(c => c.Category.Name == category.Name).ToListAsync();
+            return View(events);
+        }
     }
 }
