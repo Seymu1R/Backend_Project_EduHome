@@ -11,8 +11,8 @@
 
 
 <!-- Background Area Start -->
-        <section id="slider-container" class="slider-area"> 
-            <div class="slider-owl owl-theme owl-carousel">
+<section id="slider-container" class="slider-area">
+    <div class="slider-owl owl-theme owl-carousel">
 
         @foreach (var slider in sliders)
         {
@@ -39,104 +39,76 @@
             </div>
             <!-- End Slingle Slide -->
         }
-                
-               						
+
+
+    </div>
+</section>
+<!-- Background Area End -->
+<!-- Notice Start -->
+<section class="notice-area pt-150 pb-150">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="notice-left">
+                    <h3>notice board</h3>
+                    @foreach (var item in events)
+                    {
+                        <div class="single-notice-left mb-25 pb-25">
+                            <h4>@item.CreatedDate</h4>
+                            <p>@item.Content</p>
+                        </div>
+                    }                   
+                  
+                </div>
             </div>
-        </section>
-        <!-- Background Area End -->
-        <!-- Notice Start -->
-        <section class="notice-area pt-150 pb-150">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="notice-left">
-                            <h3>notice board</h3>
-                            <div class="single-notice-left mb-25 pb-25">
-                                <h4>5, June 2017</h4>
-                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                            </div>
-                            <div class="single-notice-left mb-25 pb-25">
-                                <h4>4, June 2017</h4>
-                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                            </div>
-                            <div class="single-notice-left pb-75">
-                                <h4>3, June 2017</h4>
-                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                            </div>
-                            <div class="single-notice-left mb-25 pb-25">
-                                <h4>5, June 2017</h4>
-                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                            </div>
-                            <div class="single-notice-left mb-25 pb-25">
-                                <h4>4, June 2017</h4>
-                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                            </div>
-                            <div class="single-notice-left pb-70">
-                                <h4>3, June 2017</h4>
-                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                            </div>
-                            <div class="single-notice-left mb-25 pb-25">
-                                <h4>5, June 2017</h4>
-                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                            </div>
-                            <div class="single-notice-left mb-25 pb-25">
-                                <h4>4, June 2017</h4>
-                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                            </div>
-                            <div class="single-notice-left pb-70">
-                                <h4>3, June 2017</h4>
-                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
-                            </div>
-                        </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="notice-right">
+                    <div class="single-notice-right mb-25 pb-25">
+                        <h3>PROFESSIONAL TEACHER</h3>
+                        <p>I must explain to you how all this mistaken idea of denouncing pleure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings </p>
                     </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="notice-right">
-                            <div class="single-notice-right mb-25 pb-25">
-                                <h3>PROFESSIONAL TEACHER</h3>
-                                <p>I must explain to you how all this mistaken idea of denouncing pleure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings </p>
-                            </div> 
-                            <div class="single-notice-right mb-25 pb-25">
-                                <h3>Online courses</h3>
-                                <p>I must explain to you how all this mistaken idea of denouncing pleure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings </p>
-                            </div> 
-                            <div class="single-notice-right">
-                                <h3>easy to addmission</h3>
-                                <p>I must explain to you how all this mistaken idea of denouncing pleure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings </p>
-                            </div>   
-                        </div>
+                    <div class="single-notice-right mb-25 pb-25">
+                        <h3>Online courses</h3>
+                        <p>I must explain to you how all this mistaken idea of denouncing pleure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings </p>
+                    </div>
+                    <div class="single-notice-right">
+                        <h3>easy to addmission</h3>
+                        <p>I must explain to you how all this mistaken idea of denouncing pleure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings </p>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Notice End -->
-        <!-- Choose Start -->
-        <section class="choose-area pb-85 pt-77">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-left-4 col-sm-8 col-md-offset-left-4">
-                        <div class="choose-content text-left">
-                            <h2>WHY YOU CHOOSE EDUHOME ?</h2>
-                            <p>I must explain to you how all this mistaken idea of denouncing pleure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings  the master-builder of humanit happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because. </p>
-                            <p class="choose-option">I must explain to you how all this mistaken idea of denouncing pleure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings  the master-builder. </p>
-                            <a class="default-btn" href="course-details.html">view courses</a>
-                        </div>  
-                    </div>
+        </div>
+    </div>
+</section>
+<!-- Notice End -->
+<!-- Choose Start -->
+<section class="choose-area pb-85 pt-77">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-left-4 col-sm-8 col-md-offset-left-4">
+                <div class="choose-content text-left">
+                    <h2>WHY YOU CHOOSE EDUHOME ?</h2>
+                    <p>I must explain to you how all this mistaken idea of denouncing pleure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings  the master-builder of humanit happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because. </p>
+                    <p class="choose-option">I must explain to you how all this mistaken idea of denouncing pleure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings  the master-builder. </p>
+                    <a class="default-btn" href="course-details.html">view courses</a>
                 </div>
             </div>
-        </section>
-        <!-- Choose Area End -->
-        <!-- Courses Area Start -->
-        <div class="courses-area pt-150 text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="section-title">
-                            <img src="~/assets/img/icon/section.png" alt="section-title">
-                            <h2>COURSES WE OFFER</h2>
-                        </div>
-                    </div>
+        </div>
+    </div>
+</section>
+<!-- Choose Area End -->
+<!-- Courses Area Start -->
+<div class="courses-area pt-150 text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="section-title">
+                    <img src="~/assets/img/icon/section.png" alt="section-title">
+                    <h2>COURSES WE OFFER</h2>
                 </div>
-                <div class="row">
+            </div>
+        </div>
+        <div class="row">
             @foreach (var item in courses)
             {
                 <div class="col-md-4 col-sm-6 col-xs-12">
@@ -152,33 +124,33 @@
                         <div class="course-content">
                             <h3><a asp-controller="Course" asp-action="Detail" asp-route-id="@item.Id">@item.Title</a></h3>
                             <p>@item.Description</p>
-                            <a class="default-btn" asp-controller="Course" asp-action="Detail" asp-route-id="@item.Id" >read more</a>
+                            <a class="default-btn" asp-controller="Course" asp-action="Detail" asp-route-id="@item.Id">read more</a>
                         </div>
                     </div>
                 </div>
 
             }
-                   
-                   
+
+
+        </div>
+    </div>
+</div>
+<!-- Courses Area End -->
+<!-- Event Area Start -->
+<div class="event-area one text-center pt-140 pb-150">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="section-title">
+                    <img src="~/assets/img/icon/section.png" alt="section-title">
+                    <h2>UPCOMMING EVENTS</h2>
                 </div>
             </div>
         </div>
-        <!-- Courses Area End -->
-        <!-- Event Area Start -->
-        <div class="event-area one text-center pt-140 pb-150">
-            <div class="container">
-                <div class="row">
-                     <div class="col-xs-12">
-                        <div class="section-title">
-                            <img src="img/icon/section.png" alt="section-title">
-                            <h2>UPCOMMING EVENTS</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-             <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
                 @foreach (var item in events)
-                    {
+                {
                     <div class="single-event mb-35">
                         <div class="event-date">
                             <h3><a href="event-details.html">@item.CreatedDate.Day <span>/@item.CreatedDate.Month</span></a></h3>
@@ -198,52 +170,29 @@
                     </div>
 
                 }
-                        
-                        
-              </div>
-                  
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Event Area End -->
+@await Component.InvokeAsync("SlideStudent")
+<!-- Blog Area Start -->
+<div class="blog-area pt-150 pb-150">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="section-title text-center">
+                    <img src="~/assets/img/icon/section.png" alt="section-title">
+                    <h2>LATEST FROM BLOG</h2>
                 </div>
             </div>
         </div>
-        <!-- Event Area End -->
-        <!-- Testimonial Area Start -->
-        <div class="testimonial-area pt-110 pb-105 text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="testimonial-owl owl-theme owl-carousel">
-                        <div class="col-md-8 col-md-offset-2 col-sm-12">
-                            <div class="single-testimonial">
-                                <div class="testimonial-info">
-                                    <div class="testimonial-img">
-                                        <img src="img/testimonial/testimonial.jpg" alt="testimonial">
-                                    </div>
-                                    <div class="testimonial-content">
-                                        <p>I must explain to you how all this mistaken idea of denoung pleure and praising pain was born and I will give you a coete account of the system, and expound the actual</p>
-                                        <h4>David Morgan</h4>
-                                        <h5>Student, CSE</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> 
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Testimonial Area End -->
-        <!-- Blog Area Start -->
-        <div class="blog-area pt-150 pb-150">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="section-title text-center">
-                            <img src="img/icon/section.png" alt="section-title">
-                            <h2>LATEST FROM BLOG</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    @foreach (var item in blogs)
-                    {
+        <div class="row">
+            @foreach (var item in blogs)
+            {
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="single-blog">
                         <div class="blog-img">
@@ -258,15 +207,15 @@
                             </div>
                             <div class="blog-bottom">
                                 <h2><a href="blog-details.html">@item.Content </a></h2>
-                                <a asp-controller="Blog" asp-action="Detail" asp-route-id="@item.Id" >read more</a>
+                                <a asp-controller="Blog" asp-action="Detail" asp-route-id="@item.Id">read more</a>
                             </div>
                         </div>
                     </div>
                 </div>
             }
-                                      
-                </div>
-            </div>
+
         </div>
-        <!-- Blog Area End -->
-     @await Component.InvokeAsync("Subscribe");
+    </div>
+</div>
+<!-- Blog Area End -->
+@await Component.InvokeAsync("Subscribe");
