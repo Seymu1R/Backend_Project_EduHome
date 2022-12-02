@@ -73,6 +73,10 @@
       "PackagePath": "staticwebassets\\admin\\assets\\img\\course\\a6a6bb3b-b63d-4665-a656-fd3cd1342744-banner-10.jpg"
     },
     {
+      "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\course\\b355fe12-45b1-44cf-9c54-e2e5372d139f-banner-image.png",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\course\\b355fe12-45b1-44cf-9c54-e2e5372d139f-banner-image.png"
+    },
+    {
       "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\course\\b4bed590-8f68-4318-aa1a-a910564ac2cd-banner-11.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\img\\course\\b4bed590-8f68-4318-aa1a-a910564ac2cd-banner-11.jpg"
     },
@@ -83,6 +87,10 @@
     {
       "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\course\\d4c254ef-3bd7-403f-8f74-d13779471806-favicon.png",
       "PackagePath": "staticwebassets\\admin\\assets\\img\\course\\d4c254ef-3bd7-403f-8f74-d13779471806-favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\course\\e04aa9b9-c772-4816-82a3-eb07cf4e1d99-banner-8.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\course\\e04aa9b9-c772-4816-82a3-eb07cf4e1d99-banner-8.jpg"
     },
     {
       "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\elements\\1.jpg",
@@ -169,8 +177,8 @@
       "PackagePath": "staticwebassets\\admin\\assets\\img\\footer\\c7a5186a-8465-4956-a003-f1d54ee77c01-category-8.jpg"
     },
     {
-      "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\header\\041f647b-d59c-4b9a-8825-e5aa3c335c9e-banner-10.jpg",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\header\\041f647b-d59c-4b9a-8825-e5aa3c335c9e-banner-10.jpg"
+      "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\header\\ab0889fe-7ff2-42da-9114-66dcde83a043-banner-9.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\header\\ab0889fe-7ff2-42da-9114-66dcde83a043-banner-9.jpg"
     },
     {
       "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\icons\\brands\\asana.png",

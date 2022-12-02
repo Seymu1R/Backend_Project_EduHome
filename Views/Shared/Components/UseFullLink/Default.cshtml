@@ -1,0 +1,12 @@
+﻿@model List<UseFullLink>
+
+<div class="single-widget">
+    <h3>useful links</h3>
+    <ul>
+        @foreach (var useFullLink in Model)
+        {
+            <li><a href="@useFullLink.Link">@useFullLink.Name</a></li>
+        }
+        
+    </ul>
+</div>

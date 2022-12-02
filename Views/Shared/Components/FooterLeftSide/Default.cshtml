@@ -1,0 +1,16 @@
+﻿@model FooterLeftSide
+ <div class="single-widget pr-60">
+    <div class="footer-logo pb-25">
+             <a href="index.html"><img src="~/admin/assets/img/footer/@Model.Logo" alt="eduhome"></a>
+       </div>
+          <p>@Model.Content </p>
+        <div class="footer-social">
+        <ul>
+            @foreach (var item in Model.TeacherSosialMedias)
+            {
+              <li><a href="@item.MediaLink"><img src="~/admin/assets/img/sosiallogo/@item.MediaLogo" /></a></li>
+            }     
+          
+          </ul>    
+    </div>
+   </div>
