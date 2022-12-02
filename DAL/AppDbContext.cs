@@ -26,6 +26,7 @@ namespace EduHomeProject.DAL
         public DbSet<HeaderLogo> HeaderLogos { get; set; }
         public DbSet<GetInTouch> GetInTouches { get; set; }
         public DbSet<FooterLeftSide> FooterLeftSides { get; set; }
+        public DbSet<Subscribe> Subscribes { get; set; }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {

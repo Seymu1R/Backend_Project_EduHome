@@ -1,12 +1,23 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using EduHomeProject.DAL;
+using EduHomeProject.DAL.Entities;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace EduHomeProject.Controllers
 {
     public class AboutController : Controller
     {
-        public IActionResult Index()
+        private readonly AppDbContext _dbcontext;
+        public static string Position="Professor";
+        public AboutController(AppDbContext dbcontext)
         {
-            return View();
+            _dbcontext = dbcontext;
+        }
+        
+        public async Task<IActionResult> Index()
+        {
+            List<Teacher> teachers=await _dbcontext.Teachers.Where(T => T.Position == Position).Take(4).ToListAsync();
+            return View(teachers);
         }
     }
 }
