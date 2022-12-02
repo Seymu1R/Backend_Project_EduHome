@@ -10,5 +10,7 @@
         public static string EventImagePath;
         public static string BlogImagePath;
         public static string SpeakerImagePath;
+        public static string FooterLeftSideImagePath;
+        public static string HeaderLogoImagePath;
     }
 }

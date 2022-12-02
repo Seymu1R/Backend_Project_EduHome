@@ -10,6 +10,8 @@
     <Folder Include="wwwroot\admin\assets\img\course\" />
     <Folder Include="wwwroot\admin\assets\img\event\" />
     <Folder Include="wwwroot\admin\assets\img\blog\" />
+    <Folder Include="wwwroot\admin\assets\img\footer\" />
+    <Folder Include="wwwroot\admin\assets\img\header\" />
     <Folder Include="wwwroot\admin\assets\img\speaker\" />
     <Folder Include="wwwroot\admin\assets\img\sosiallogo\" />
     <Folder Include="wwwroot\admin\assets\img\teacher\" />

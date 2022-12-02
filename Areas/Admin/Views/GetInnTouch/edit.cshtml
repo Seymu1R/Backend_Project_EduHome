@@ -1,0 +1,49 @@
+﻿@using EduHomeProject.Areas.Admin.Models.GetInTouch;
+@model CreateGetInTouchViewModel
+
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"> EduHomeEdit /</span> Slider Tables <span> /Edit </span></h4>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-4">
+                <h5 class="card-header">Default</h5>
+                <div class="card-body">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <form method="post" asp-action="Edit" enctype="multipart/form-data">
+                        <div>
+                            <label asp-for="WebAdress" class="form-label">WebAdress</label>
+                            <input asp-for="WebAdress"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="WebAdress"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="WebAdress"></span>
+
+                        </div>
+                        <div>
+                            <label asp-for="Location" class="form-label">Location</label>
+                            <input asp-for="Location"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="Location"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="Location"></span>
+                        </div>
+                        <div>
+                            <label asp-for="PhoneContact" class="form-label">PhoneContact</label>
+                            <input asp-for="PhoneContact"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="PhoneContact"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="PhoneContact"></span>
+                        </div>
+                        <button type="submit" class="btn btn-success mt-5 "> Edit  </button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

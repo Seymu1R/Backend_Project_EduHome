@@ -165,6 +165,14 @@
       "PackagePath": "staticwebassets\\admin\\assets\\img\\favicon\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\footer\\c7a5186a-8465-4956-a003-f1d54ee77c01-category-8.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\footer\\c7a5186a-8465-4956-a003-f1d54ee77c01-category-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\header\\041f647b-d59c-4b9a-8825-e5aa3c335c9e-banner-10.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\header\\041f647b-d59c-4b9a-8825-e5aa3c335c9e-banner-10.jpg"
+    },
+    {
       "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\icons\\brands\\asana.png",
       "PackagePath": "staticwebassets\\admin\\assets\\img\\icons\\brands\\asana.png"
     },
@@ -267,6 +275,10 @@
     {
       "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\slider\\57c6c2aa-a8a1-486c-9476-9a7b8af6ad5d-slider-8.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\img\\slider\\57c6c2aa-a8a1-486c-9476-9a7b8af6ad5d-slider-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\slider\\7ff4b75d-a023-4ed1-8439-0098c64a348d-banner-11.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\slider\\7ff4b75d-a023-4ed1-8439-0098c64a348d-banner-11.jpg"
     },
     {
       "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\speaker\\1859914e-710a-448d-8596-287c4f8ee488-author-1.png",

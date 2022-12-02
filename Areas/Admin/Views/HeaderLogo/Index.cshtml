@@ -1,0 +1,72 @@
+﻿@model List<HeaderLogo>
+<!-- Content wrapper -->
+<div class="content-wrapper">
+    <!-- Content -->
+
+    <div class="container-xxl flex-grow-1 container-p-y">
+        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"> EduHomeEdit /</span> Slider Tables</h4>
+
+        <!-- Basic Bootstrap Table -->
+        <div class="card">
+            <h5 class="card-header">Slider Table<a asp-action="create" class=" btn btn-danger mx-5 "> Create Slide </a></h5>
+            <div class="table-responsive text-nowrap">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            
+                            <th>ImageUrl</th>
+                            
+                        </tr>
+                    </thead>
+                    @foreach (var headerLogo in Model)
+                    {
+                        <tbody class="table-border-bottom-0">
+                            <tr>
+                               
+                                <td>
+                                    <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+                                        <li data-bs-toggle="tooltip"
+                                        data-popup="tooltip-custom"
+                                        data-bs-placement="top"
+                                        class="avatar avatar-xs pull-up"
+                                        title="Lilian Fuller">
+                                            <img src="~/admin/assets/img/header/@headerLogo.ImageUrl" alt="Avatar" class="rounded-circle" />
+                                        </li>
+
+                                    </ul>
+                                </td>
+                                
+                                <td>
+                                    <div class="dropdown">
+                                        <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                        </button>
+                                        <div class="dropdown-menu">
+
+                                            <a type="submit" class="dropdown-item" asp-action="Edit" asp-route-id="@headerLogo.Id"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+
+                                            <form method="post" asp-action="Delete">
+                                                <button type="submit" asp-action="Delete" asp-route-id="@headerLogo.Id" class="dropdown-item"><i class="bx bx-trash me-1"></i> Delete</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    }
+
+                </table>
+            </div>
+        </div>
+        <!--/ Basic Bootstrap Table -->
+
+
+    </div>
+    <!-- / Content -->
+    <!-- Footer -->
+
+
+
+</div>
+<!-- Content wrapper -->
