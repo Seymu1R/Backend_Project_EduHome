@@ -42,5 +42,10 @@ namespace EduHomeProject.Controllers
             List<Course> courses = await _dbContext.Courses.Where(c => c.Category.Name == category.Name).ToListAsync();
             return View(courses);
         }
+        public async Task<IActionResult> Search(string searchText) 
+        {
+            List<Course> courses = await _dbContext.Courses.Where(x => x.Title.ToLower().Contains(searchText.ToLower())).ToListAsync();
+            return PartialView("_SearchedCoursePartial", courses);
+        }
     }
 }

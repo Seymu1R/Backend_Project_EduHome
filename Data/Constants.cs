@@ -12,5 +12,7 @@
         public static string SpeakerImagePath;
         public static string FooterLeftSideImagePath;
         public static string HeaderLogoImagePath;
+        public const string AdminRole = "Admin";
+        public const string UserRole = "User";
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OXXMzn3VnsVEGdY4oOKJO8DwQEwcUUidH43WZbJg4Bc=",
+  "Hash": "gHqe922Lrr65ikJ1GGUI5GIerPV0KpC6O6VLTdZeAeI=",
   "Source": "EduHomeProject",
   "BasePath": "_content/EduHomeProject",
   "Mode": "Default",
@@ -1256,6 +1256,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\admin\\assets\\img\\slider\\7ff4b75d-a023-4ed1-8439-0098c64a348d-banner-11.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\slider\\eeb57c5e-accb-4627-a165-deb3663e3553-slider3.jpg",
+      "SourceId": "EduHomeProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\",
+      "BasePath": "_content/EduHomeProject",
+      "RelativePath": "admin/assets/img/slider/eeb57c5e-accb-4627-a165-deb3663e3553-slider3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\assets\\img\\slider\\eeb57c5e-accb-4627-a165-deb3663e3553-slider3.jpg"
     },
     {
       "Identity": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\speaker\\1859914e-710a-448d-8596-287c4f8ee488-author-1.png",
@@ -3842,23 +3859,6 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\testimonial\\testimonial-bg.jpg"
     },
     {
-      "Identity": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\assets\\index.html",
-      "SourceId": "EduHomeProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\",
-      "BasePath": "_content/EduHomeProject",
-      "RelativePath": "assets/index.html",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\index.html"
-    },
-    {
       "Identity": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\assets\\js\\ajax-mail.js",
       "SourceId": "EduHomeProject",
       "SourceType": "Discovered",
@@ -3891,6 +3891,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\bootstrap.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\assets\\js\\course.js",
+      "SourceId": "EduHomeProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\",
+      "BasePath": "_content/EduHomeProject",
+      "RelativePath": "assets/js/course.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\js\\course.js"
     },
     {
       "Identity": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\assets\\js\\jquery.magnific-popup.js",

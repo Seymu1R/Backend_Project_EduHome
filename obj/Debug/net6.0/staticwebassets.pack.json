@@ -289,6 +289,10 @@
       "PackagePath": "staticwebassets\\admin\\assets\\img\\slider\\7ff4b75d-a023-4ed1-8439-0098c64a348d-banner-11.jpg"
     },
     {
+      "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\slider\\eeb57c5e-accb-4627-a165-deb3663e3553-slider3.jpg",
+      "PackagePath": "staticwebassets\\admin\\assets\\img\\slider\\eeb57c5e-accb-4627-a165-deb3663e3553-slider3.jpg"
+    },
+    {
       "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\speaker\\1859914e-710a-448d-8596-287c4f8ee488-author-1.png",
       "PackagePath": "staticwebassets\\admin\\assets\\img\\speaker\\1859914e-710a-448d-8596-287c4f8ee488-author-1.png"
     },
@@ -897,16 +901,16 @@
       "PackagePath": "staticwebassets\\assets\\img\\testimonial\\testimonial.jpg"
     },
     {
-      "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\assets\\index.html",
-      "PackagePath": "staticwebassets\\assets\\index.html"
-    },
-    {
       "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\assets\\js\\ajax-mail.js",
       "PackagePath": "staticwebassets\\assets\\js\\ajax-mail.js"
     },
     {
       "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\assets\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\assets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\assets\\js\\course.js",
+      "PackagePath": "staticwebassets\\assets\\js\\course.js"
     },
     {
       "Id": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\assets\\js\\jquery.magnific-popup.js",

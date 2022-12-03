@@ -38,8 +38,10 @@
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="header-top-right text-right">
                             <ul>
-                                <li><a asp-controller="Login" asp-action="Index" >login</a></li>                                
+                                <li><a asp-controller="Account" asp-action="login" >Login</a></li>
+                                <li><a asp-controller="Account" asp-action="logout">Logout</a></li>
                             </ul>
+                            
                         </div>
                     </div>
                 </div>
@@ -126,8 +128,11 @@
             </div>
         </div>
     </footer>
+    
+
     <!-- Footer End -->
-   <script src="~/assets/js/vendor/jquery-1.12.0.min.js"></script>
+      <script src="~/assets/js/course.js"></script>
+       <script src="~/assets/js/vendor/jquery-1.12.0.min.js"></script>
         <script src="~/assets/js/bootstrap.min.js"></script>
         <script src="~/assets/js/jquery.meanmenu.js"></script>
         <script src="~/assets/js/jquery.magnific-popup.js"></script>
@@ -139,5 +144,6 @@
         <script src="~/assets/js/main.js"></script>
     </body>
 
+    
 <!-- Mirrored from demo.devitems.com/eduhome/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Jun 2020 19:44:03 GMT -->
 </html>

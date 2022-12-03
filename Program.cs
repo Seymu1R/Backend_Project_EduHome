@@ -1,5 +1,7 @@
 using EduHomeProject.DAL;
+using EduHomeProject.DAL.Entities;
 using EduHomeProject.Data;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.Metadata;
 
@@ -7,7 +9,7 @@ namespace EduHomeProject
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -15,8 +17,20 @@ namespace EduHomeProject
             builder.Services.AddControllersWithViews();
 
             builder.Services.AddDbContext<AppDbContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
+                builder => {
+                    builder.MigrationsAssembly(nameof(EduHomeProject));
+                }));
+            builder.Services.AddIdentity<User, IdentityRole>(options => 
+            {
+                options.Lockout.MaxFailedAccessAttempts= 5;
+                options.Lockout.DefaultLockoutTimeSpan= TimeSpan.FromSeconds(5);
+                options.Password.RequireLowercase= false;
+                options.Password.RequireUppercase= false;
+                options.Password.RequireNonAlphanumeric= false;
+                options.User.RequireUniqueEmail= true;
+            }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+            builder.Services.Configure<AdminUser>(builder.Configuration.GetSection("AdminUser"));
             Constants.RootPath = builder.Environment.WebRootPath;
             Constants.SliderImagePath = Path.Combine(Constants.RootPath, "admin", "assets", "img", "slider");
             Constants.TeacherImagePath = Path.Combine(Constants.RootPath, "admin", "assets", "img", "teacher");
@@ -39,9 +53,14 @@ namespace EduHomeProject
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            using (var scope = app.Services.CreateScope()) {
+                var serviceProvider = scope.ServiceProvider; ;
+                var dataInthilaizer = new DataInitializer(serviceProvider);
+                await dataInthilaizer.SeedData();
+            }
+                app.UseRouting();
 
-            app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
@@ -54,9 +73,9 @@ namespace EduHomeProject
                 pattern: "{controller=Home}/{action=Index}/{id?}");
             });
 
-            
 
-            app.Run();
+
+            await app.RunAsync();
         }
     }
 }
