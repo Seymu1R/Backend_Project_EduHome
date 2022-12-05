@@ -20,7 +20,10 @@ namespace EduHomeProject.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            List<TeacherSosialMedia> lists = await _dbcontext.TeacherSosialMedias.Include(t => t.Teacher).ToListAsync();
+            List<TeacherSosialMedia> lists = await _dbcontext.TeacherSosialMedias
+                .Include(t => t.Teacher)
+                .ToListAsync();
+
             return View(lists);
         }
         public async Task<IActionResult> Create()
@@ -44,35 +47,42 @@ namespace EduHomeProject.Areas.Admin.Controllers
         {
             TeacherSosialMedia sosialmedia = new TeacherSosialMedia();
 
-            Teacher teacher = _dbcontext.Teachers.Where(x => x.Id == model.TeacherId).SingleOrDefault();
+            Teacher teacher = _dbcontext.Teachers
+                .Where(x => x.Id == model.TeacherId)
+                .SingleOrDefault();
+
             if (teacher == null) return BadRequest();
 
             if (!ModelState.IsValid)
             {
                 return View();
             }
+
             if (!model.MediaLogo.IsAllowedSize(10))
             {
                 ModelState.AddModelError("", "Photo cannot be larger than 10 mb.");
                 return View();
             }
+
             if (!model.MediaLogo.IsImage())
             {
                 ModelState.AddModelError("", "The photo is not suitable");
                 return View();
             }
+
             if (await _dbcontext.Teachers.AnyAsync(teacher => teacher.Id == model.TeacherId) &&
                 await _dbcontext.TeacherSosialMedias.AnyAsync(ts => ts.TeacherId == model.TeacherId))
             {
                 ModelState.AddModelError("", "One teacher cannot be selected twice");
                 return View();
             }
+
             string unicalName = await model.MediaLogo.GenerateFile(Constants.TeacherSosialLogoPath);
 
             sosialmedia.MediaLink = model.MediaLink;
             sosialmedia.MediaLogo = unicalName;
             sosialmedia.Teacher = teacher;
-            sosialmedia.Name=model.Name;
+            sosialmedia.Name = model.Name;
 
             await _dbcontext.TeacherSosialMedias.AddAsync(sosialmedia);
             _dbcontext.SaveChanges();
@@ -92,7 +102,7 @@ namespace EduHomeProject.Areas.Admin.Controllers
             {
                 MediaLink = SosialMedia.MediaLink,
                 ImageUrl = SosialMedia.MediaLogo,
-                Name=SosialMedia.Name,
+                Name = SosialMedia.Name,
             };
 
 
@@ -121,11 +131,13 @@ namespace EduHomeProject.Areas.Admin.Controllers
             {
                 return View(modelsosial);
             }
+
             if (!model.image.IsAllowedSize(10))
             {
                 ModelState.AddModelError("", "Şəklin Hecmi 10 mb- dan boyuk ola bilmez");
                 return View(modelsosial);
             }
+
             if (!model.image.IsImage())
             {
                 ModelState.AddModelError("", "Şəkil uyğun deyil");
@@ -138,11 +150,12 @@ namespace EduHomeProject.Areas.Admin.Controllers
             {
                 System.IO.File.Delete(imagepath);
             }
+
             string unicalName = await model.image.GenerateFile(Constants.TeacherSosialLogoPath);
 
             editedsosial.MediaLink = model.MediaLink;
             editedsosial.MediaLogo = unicalName;
-            editedsosial.Name= model.Name;
+            editedsosial.Name = model.Name;
 
             await _dbcontext.SaveChangesAsync();
 

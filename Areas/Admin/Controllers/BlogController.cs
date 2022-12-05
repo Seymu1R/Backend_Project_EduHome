@@ -82,6 +82,7 @@ namespace EduHomeProject.Areas.Admin.Controllers
             if (id is null) return BadRequest();
 
             Blog blog = await _dbContext.Blogs.FindAsync(id);
+
             List<Category> categories = await _dbContext.Categories.ToListAsync();
 
             var categoryListItems = new List<SelectListItem>
@@ -94,7 +95,7 @@ namespace EduHomeProject.Areas.Admin.Controllers
             CreateBlogViewModel blogmodel = new CreateBlogViewModel
             {
                 Title = blog.Title,
-                Content=blog.Content,               
+                Content = blog.Content,               
                 CategoryList = categoryListItems,
 
             };

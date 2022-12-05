@@ -20,7 +20,7 @@ namespace EduHomeProject.Areas.Admin.Controllers
     
         public async Task<IActionResult> Index()
         {
-            List<FooterLeftSide> footerLeftSides= await _dbContext.FooterLeftSides.ToListAsync();
+            List<FooterLeftSide> footerLeftSides = await _dbContext.FooterLeftSides.ToListAsync();
             return View(footerLeftSides);
         }
         public IActionResult Create()
@@ -48,10 +48,13 @@ namespace EduHomeProject.Areas.Admin.Controllers
                 return View();
             }
             string unicalName = await model.Image.GenerateFile(Constants.FooterLeftSideImagePath);
+
             footerLeftSide.Logo = unicalName;
             footerLeftSide.Content = model.Content;
+
             await _dbContext.FooterLeftSides.AddAsync(footerLeftSide);
             await _dbContext.SaveChangesAsync();
+
             return RedirectToAction(nameof(Index));
         }
         [HttpPost]

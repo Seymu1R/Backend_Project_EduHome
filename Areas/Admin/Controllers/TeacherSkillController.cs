@@ -51,6 +51,7 @@ namespace EduHomeProject.Areas.Admin.Controllers
             {
                 return View();
             }
+
             if (await _dbcontext.Teachers.AnyAsync(teacher => teacher.Id == model.TeacherId) &&
                 await _dbcontext.TeacherSkills.AnyAsync(ts => ts.TeacherId == model.TeacherId))
             {

@@ -90,8 +90,11 @@ namespace EduHomeProject.Areas.Admin.Controllers
         public async Task<IActionResult> Edit(int? id, CreateHeaderLogoViewModel model)
         {
             if (id == null) return NotFound();
+
             HeaderLogo headerLogo = await _dbCobtext.HeaderLogos.FindAsync(id);
+
             if (headerLogo is null) return NotFound();
+
             if (headerLogo.Id != id) return BadRequest();            
 
             if (!ModelState.IsValid)

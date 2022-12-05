@@ -116,10 +116,10 @@ namespace EduHomeProject.Areas.Admin.Controllers
             if (editedslider.Id != id) return BadRequest();   
             
             EditSliderViewModel slidermodel = new EditSliderViewModel {
-                Subtitle= editedslider.SubTitle,
+                Subtitle = editedslider.SubTitle,
                 Title = editedslider.Title,
-                Description=editedslider.Description,
-                ImageUrl=editedslider.ImageUrl
+                Description = editedslider.Description,
+                ImageUrl = editedslider.ImageUrl
                
             };
             

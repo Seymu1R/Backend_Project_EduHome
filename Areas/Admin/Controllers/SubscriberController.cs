@@ -22,10 +22,14 @@ namespace EduHomeProject.Areas.Admin.Controllers
         public async Task<IActionResult> Delete(int? id )
         {
             if (id is null) return BadRequest();
+
             Subscribe subscribe =  await _dbcontext.Subscribes.FindAsync(id);
+
             if (subscribe == null) return NotFound();
+
             _dbcontext.Subscribes.Remove(subscribe);
             await _dbcontext.SaveChangesAsync();
+
             return RedirectToAction(nameof(Index));                
            
         }

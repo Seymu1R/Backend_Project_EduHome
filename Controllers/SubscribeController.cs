@@ -17,10 +17,14 @@ namespace EduHomeProject.Controllers
         [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> SendEmail(SubscribeViewModel model)
         {
-            Subscribe subscribe= new Subscribe();
+            Subscribe subscribe = new Subscribe();
+
             subscribe.EmailAdress = model.Email;
+
             await _dbcontext.Subscribes.AddAsync(subscribe);
+
             await _dbcontext.SaveChangesAsync();
+
             return Redirect("/Home/Index");
         }
     }

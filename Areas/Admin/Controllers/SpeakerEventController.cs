@@ -18,29 +18,36 @@ namespace EduHomeProject.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            List<SpeakerEvent> list = await _dbContext.SpeakerEvents.Include(e=>e.Event).Include(s=>s.Speaker).ToListAsync();
+            List<SpeakerEvent> list = await _dbContext.SpeakerEvents
+                .Include(e=>e.Event)
+                .Include(s=>s.Speaker).ToListAsync();
+
             return View(list);
         }
         public async Task<IActionResult> Create() 
         {
             List<Speaker> speakers = await _dbContext.Speakers.ToListAsync();
             List<Event> events = await _dbContext.Events.ToListAsync();
+
             var categorySpeakersItems = new List<SelectListItem>
             {
                 new SelectListItem("--Select Speaker--", "0")
             };
+
             var categoryEventsItems = new List<SelectListItem>
             {
                 new SelectListItem("--Select Event--", "0")
             };
+
             speakers.ForEach(category => categorySpeakersItems.Add(new SelectListItem(category.FullName, category.Id.ToString())));
             events.ForEach(category => categoryEventsItems.Add(new SelectListItem(category.Title, category.Id.ToString())));
 
             SpeakerEventCreateModelView viewmodel = new SpeakerEventCreateModelView
             {
                 SpeakerList = categorySpeakersItems,
-                EventList=categoryEventsItems
+                EventList = categoryEventsItems
             };
+
             return View(viewmodel);
         }
         [HttpPost]
@@ -91,7 +98,9 @@ namespace EduHomeProject.Areas.Admin.Controllers
         public async Task<IActionResult> Edit(int? id, SpeakerEventCreateModelView model)
         {
             if (id is null) return BadRequest();
+
             SpeakerEvent speakerevent = await _dbContext.SpeakerEvents.FindAsync(id);
+
             if(speakerevent is null) return NotFound();
 
             if (!ModelState.IsValid)
@@ -99,7 +108,7 @@ namespace EduHomeProject.Areas.Admin.Controllers
                 return View();
             }
 
-            speakerevent.Speaker= await _dbContext.Speakers.FindAsync(model.SpeakerId);
+            speakerevent.Speaker = await _dbContext.Speakers.FindAsync(model.SpeakerId);
             speakerevent.Event = await _dbContext.Events.FindAsync(model.EventId);
 
             await  _dbContext.SaveChangesAsync();

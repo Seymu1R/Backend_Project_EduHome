@@ -22,17 +22,20 @@ namespace EduHomeProject.Controllers
         public async Task<IActionResult> SendMessage(LeaveMessageModelView model)
         {
             LeaveMessage message= new LeaveMessage();
+
             if (!ModelState.IsValid) 
             {
-                return View();
-                return ViewComponent("LeaveMessage");
+                return View();                
             }
+
             message.Subject=model.Subject;
             message.Email = model.Email;
             message.Message=model.Message;
             message.Name=model.Name;
+
             await _dbContext.LeaveMessages.AddAsync(message);
             await _dbContext.SaveChangesAsync();
+
             return RedirectToAction(nameof(Index));
         }
     }

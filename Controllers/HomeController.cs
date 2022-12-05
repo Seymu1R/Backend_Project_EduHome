@@ -19,15 +19,15 @@ namespace EduHomeProject.Controllers
         {
             List<Slider> sliders = await _dbContext.Sliders.ToListAsync();
             List<Course> courses = await _dbContext.Courses.Take(3).ToListAsync();
-            List<Event> events= await _dbContext.Events.OrderByDescending(e=>e.CreatedDate).ToListAsync();
+            List<Event> events= await _dbContext.Events.OrderByDescending(e => e.CreatedDate).ToListAsync();
             List<Blog> blogs = await _dbContext.Blogs.OrderByDescending(e => e.CreatedDate).Take(3).ToListAsync();
    
             HomeViewModel viewModel= new HomeViewModel 
             {
-                Sliders= sliders,
-                Courses= courses,
-                Events= events,
-                Blogs= blogs
+                Sliders = sliders,
+                Courses = courses,
+                Events = events,
+                Blogs = blogs
             };
             return View(viewModel);
         }        

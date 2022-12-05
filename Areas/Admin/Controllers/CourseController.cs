@@ -92,6 +92,7 @@ namespace EduHomeProject.Areas.Admin.Controllers
             if (id is null) return BadRequest();
 
             Course course = await _dbcontext.Courses.FindAsync(id);
+
             List<Category> categories = await _dbcontext.Categories.ToListAsync();
 
             var categoryListItems = new List<SelectListItem>
@@ -105,17 +106,17 @@ namespace EduHomeProject.Areas.Admin.Controllers
             {
                 Title = course.Title,
                 Assesment = course.Assesment,
-                HowToApply= course.HowToApply,
-                About= course.About,
-                Duration= course.Duration,
-                ClassDuration= course.ClassDuration,
-                Certification= course.Certification,
-                Description= course.Description,
-                Language= course.Language,
-                Price= course.Price,
-                StartTime= course.StartTime,
-                SkillLevel= course.SkillLevel,
-                Students= course.Students,
+                HowToApply = course.HowToApply,
+                About = course.About,
+                Duration = course.Duration,
+                ClassDuration = course.ClassDuration,
+                Certification = course.Certification,
+                Description = course.Description,
+                Language = course.Language,
+                Price = course.Price,
+                StartTime = course.StartTime,
+                SkillLevel = course.SkillLevel,
+                Students = course.Students,
                 CategoryList = categoryListItems,
 
             };

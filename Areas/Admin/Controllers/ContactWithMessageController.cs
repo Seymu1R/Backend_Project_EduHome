@@ -14,7 +14,8 @@ namespace EduHomeProject.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            List<LeaveMessage> leaveMessages= await _dbcontext.LeaveMessages.ToListAsync();
+            List<LeaveMessage> leaveMessages = await _dbcontext.LeaveMessages.ToListAsync();
+
             return View(leaveMessages);
         }
     }

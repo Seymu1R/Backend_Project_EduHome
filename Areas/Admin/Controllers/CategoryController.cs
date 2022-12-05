@@ -47,6 +47,7 @@ namespace EduHomeProject.Areas.Admin.Controllers
             Category category = await _context.Categories.FindAsync(id);
 
             if (category == null) return NotFound();
+
             CreateCategoryViewModel model = new CreateCategoryViewModel
             {
                 Name = category.Name
@@ -78,10 +79,12 @@ namespace EduHomeProject.Areas.Admin.Controllers
         {
             if(id is null) return BadRequest();
 
-            Category category =await _context.Categories.FindAsync(id);
+            Category category = await _context.Categories.FindAsync(id);
 
             if (category == null) return NotFound();
+
              _context.Categories.Remove(category);
+
             await _context.SaveChangesAsync();  
 
             return RedirectToAction(nameof(Index));

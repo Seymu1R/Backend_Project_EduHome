@@ -15,7 +15,7 @@ namespace EduHomeProject.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            List<Teacher> teachers = await _dbContext.Teachers.Include(tso=>tso.TeacherSosialMedias).ToListAsync();
+            List<Teacher> teachers = await _dbContext.Teachers.Include(tso => tso.TeacherSosialMedias).ToListAsync();
             return View(teachers);
         }
         public async Task<IActionResult> Detail(int? id)
@@ -23,7 +23,8 @@ namespace EduHomeProject.Controllers
             Teacher teacher = await _dbContext.Teachers.Include(tsi => tsi.TeacherSkils)
                 .Include(tso => tso.TeacherSosialMedias)
                 .Where(i => i.Id == id).SingleOrDefaultAsync();
-            TeacherSkill teacherskill = await _dbContext.TeacherSkills.Where(ts=>ts.Teacher==teacher).SingleOrDefaultAsync();
+            TeacherSkill teacherskill = await _dbContext.TeacherSkills
+                .Where(ts=>ts.Teacher==teacher).SingleOrDefaultAsync();
 
             TeacherViewModel viewmodel = new TeacherViewModel
             {

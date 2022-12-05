@@ -31,20 +31,24 @@ namespace EduHomeProject.Areas.Admin.Controllers
         public async Task<IActionResult> Create(CreateTeacherViewModel model)
         {
             Teacher teacher = new Teacher();
+
             if (!ModelState.IsValid)
             {
                 return View();
             }
+
             if (!model.Image.IsAllowedSize(10))
             {
                 ModelState.AddModelError("", "Photo cannot be larger than 10 mb.");
                 return View();
             }
+
             if (!model.Image.IsImage())
             {
                 ModelState.AddModelError("", "The photo is not suitable");
                 return View();
             }
+
             string unicalName = await model.Image.GenerateFile(Constants.TeacherImagePath);
 
             teacher.Position = model.Position;
@@ -122,11 +126,13 @@ namespace EduHomeProject.Areas.Admin.Controllers
             {
                 return View(teachermodel);
             }
+
             if (!model.Image.IsAllowedSize(10))
             {
                 ModelState.AddModelError("", "Şəklin Hecmi 10 mb- dan boyuk ola bilmez");
                 return View(teachermodel);
             }
+
             if (!model.Image.IsImage())
             {
                 ModelState.AddModelError("", "Şəkil uyğun deyil");
@@ -139,7 +145,9 @@ namespace EduHomeProject.Areas.Admin.Controllers
             {
                 System.IO.File.Delete(imagepath);
             }
+
             string unicalName = await model.Image.GenerateFile(Constants.TeacherImagePath);
+
             editedteacher.Position = model.Position;
             editedteacher.AboutMe = model.AboutMe;
             editedteacher.Degree = model.Degree;

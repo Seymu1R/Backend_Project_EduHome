@@ -89,8 +89,8 @@ namespace EduHomeProject.Areas.Admin.Controllers
 
             CreateSpeakerViewModel slidermodel = new CreateSpeakerViewModel
             {
-                FullName= speaker.FullName,
-                Position=speaker.Position,
+                FullName = speaker.FullName,
+                Position = speaker.Position,
 
             };
             return View(slidermodel);
@@ -138,7 +138,7 @@ namespace EduHomeProject.Areas.Admin.Controllers
 
             string unicalName = await model.Image.GenerateFile(Constants.SpeakerImagePath);
             speaker.FullName = model.FullName;
-            speaker.Position=model.Position;
+            speaker.Position = model.Position;
             speaker.ImageUrl = unicalName;
 
             await _dbContext.SaveChangesAsync();
