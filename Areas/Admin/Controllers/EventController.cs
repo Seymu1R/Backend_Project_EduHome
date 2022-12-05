@@ -55,12 +55,12 @@ namespace EduHomeProject.Areas.Admin.Controllers
             }
             if (!model.Image.IsAllowedSize(10))
             {
-                ModelState.AddModelError("", "Şəklin Hecmi 10 mb- dan boyuk ola bilmez");
+                ModelState.AddModelError("", "Photo cannot be larger than 10 mb.");
                 return View();
             }
             if (!model.Image.IsImage())
             {
-                ModelState.AddModelError("", "Şəkil uyğun deyil");
+                ModelState.AddModelError("", "The photo is not suitable");
                 return View();
             }
             string unicalName = await model.Image.GenerateFile(Constants.EventImagePath);
@@ -70,6 +70,7 @@ namespace EduHomeProject.Areas.Admin.Controllers
             eventitem.Content = model.Content;
             eventitem.Title= model.Title;
             eventitem.StartTime= model.StartTime;
+            eventitem.EndTime= model.EndTime;
             eventitem.ImageUrl = unicalName;
             eventitem.Category = category; 
 
@@ -96,6 +97,7 @@ namespace EduHomeProject.Areas.Admin.Controllers
             {
                 Title = eventitem.Title,
                 StartTime= eventitem.StartTime,
+                EndTime= eventitem.EndTime,
                 Duration= eventitem.Duration,
                 Location = eventitem.Location,
                 Content = eventitem.Content,
@@ -136,12 +138,12 @@ namespace EduHomeProject.Areas.Admin.Controllers
             }
             if (!model.Image.IsAllowedSize(10))
             {
-                ModelState.AddModelError("", "Şəklin Hecmi 10 mb- dan boyuk ola bilmez");
+                ModelState.AddModelError("", "Photo cannot be larger than 10 mb.");
                 return View(eventemodel);
             }
             if (!model.Image.IsImage())
             {
-                ModelState.AddModelError("", "Şəkil uyğun deyil");
+                ModelState.AddModelError("", "The photo is not suitable");
                 return View(eventemodel);
             }
             string imagepath = Path.Combine(Constants.EventImagePath, eventitem.ImageUrl);
@@ -158,6 +160,7 @@ namespace EduHomeProject.Areas.Admin.Controllers
             eventitem.ImageUrl = unicalName;
             eventitem.Content = model.Content;
             eventitem.StartTime = model.StartTime;
+            eventitem.EndTime = model.EndTime;
             eventitem.Title = model.Title;
 
             await _dbcontext.SaveChangesAsync();

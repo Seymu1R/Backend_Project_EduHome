@@ -28,6 +28,7 @@ namespace EduHomeProject.DAL
         public DbSet<GetInTouch> GetInTouches { get; set; }
         public DbSet<FooterLeftSide> FooterLeftSides { get; set; }
         public DbSet<Subscribe> Subscribes { get; set; }
+        public DbSet<LeaveMessage> LeaveMessages { get; set; }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
@@ -40,10 +41,12 @@ namespace EduHomeProject.DAL
             foreach (var entityEntry in entries)
             {
                 ((BaseEntity)entityEntry.Entity).UpdatedDate = DateTime.Now;
+                ((BaseEntity)entityEntry.Entity).UpdatedBy = "Admin";
 
                 if (entityEntry.State == EntityState.Added)
                 {
                     ((BaseEntity)entityEntry.Entity).CreatedDate = DateTime.Now;
+                    ((BaseEntity)entityEntry.Entity).CreatedBy = "Admin";
                 }
             }
 

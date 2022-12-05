@@ -32,13 +32,13 @@
                                 </div>
                             </a>
                             <div class="event-date">
-                                <h3>@eventitem.CreatedDate.Day<span>/ @eventitem.CreatedDate.Month</span></h3>
+                                <h3>@eventitem.StartTime.Day<span>/ @eventitem.StartTime.Month</span></h3>
                             </div>
                         </div>
                         <div class="event-content text-left">
                             <h4><a asp-action="detail" asp-route-id="@eventitem.Id" >@eventitem.Title</a></h4>
                             <ul>
-                                <li><span>time:</span> @eventitem.Duration</li>
+                                <li><span>time:</span> @eventitem.StartTime.TimeOfDay.Hours  PM-@eventitem.EndTime.TimeOfDay.Hours PM</li>
                                 <li><span>venue</span> @eventitem.Location</li>
                             </ul>
                             <div class="event-content-right">

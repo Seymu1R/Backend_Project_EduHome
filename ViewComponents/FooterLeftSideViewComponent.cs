@@ -15,7 +15,7 @@ namespace EduHomeProject.ViewComponents
         }
         public async Task<IViewComponentResult> InvokeAsync()
         {
-           FooterLeftSide footerLeft = await _dbContext.FooterLeftSides.Include(ts => ts.TeacherSosialMedias).FirstOrDefaultAsync();            
+           FooterLeftSide footerLeft = await _dbContext.FooterLeftSides.FirstOrDefaultAsync();            
            return View(footerLeft);
         }
 

@@ -6,7 +6,8 @@ namespace EduHomeProject.Areas.Admin.Models.Event
     public class CreateEventModelView
     {
         public string Title { get; set; }
-        public string StartTime { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
         public string Duration { get; set; }       
         public string Location { get; set; }
         public string Content { get; set; }

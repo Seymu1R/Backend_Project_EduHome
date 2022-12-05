@@ -30,13 +30,13 @@
                     <div class="event-details-img">
                         <img src="~/admin/assets/img/event/@eventitem.ImageUrl" alt="event-details">
                         <div class="event-date">
-                            <h3>@eventitem.StartTime</span></h3>
+                            <h3>@eventitem.StartTime.Day<span>/ @eventitem.StartTime.Month</span></h3>
                         </div>
                     </div>
                     <div class="event-details-content">
                         <h2>@eventitem.Title</h2>
                         <ul>
-                            <li><span>time : </span>@eventitem.Duration</li>
+                            <li><span>time:</span> @eventitem.StartTime.TimeOfDay.Hours  PM-@eventitem.EndTime.TimeOfDay.Hours PM</li>
                             <li><span>venue : </span>@eventitem.Location</li>
                         </ul>
                         <p> @eventitem.Content </p>
@@ -47,7 +47,7 @@
                             {
                                 <div class="single-speaker">
                                 <div class="speaker-img">
-                                        <img src="~/admin/assets/img/speaker/@item.Speaker?.ImageUrl alt="speaker">
+                                        <img src="~/admin/assets/img/speaker/@item.Speaker?.ImageUrl" alt="speaker">
                                 </div>
                                 <div class="speaker-name">
                                     <h5>@item.Speaker?.FullName</h5>

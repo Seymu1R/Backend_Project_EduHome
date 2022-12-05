@@ -9,6 +9,16 @@
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <img src="~/admin/assets/img/sosiallogo/@Model.ImageUrl" style="width:150px;height:150px;" />
                     <form method="post" asp-action="Edit" enctype="multipart/form-data">
+                         <div>
+                            <label asp-for="Name" class="form-label">Name</label>
+                            <input asp-for="Name"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="Name"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="Name"></span>
+
+                        </div>   
                         <div>
                             <label asp-for="MediaLink" class="form-label">MediaLink</label>
                             <input asp-for="MediaLink"

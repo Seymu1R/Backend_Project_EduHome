@@ -29,6 +29,15 @@
                             <span class="text-danger" asp-validation-for="StartTime"></span>
                         </div>
                         <div>
+                            <label asp-for="EndTime" class="form-label">EndTime</label>
+                            <input asp-for="EndTime"
+                                   class="form-control"
+                                   id="defaultFormControlInput"
+                                   placeholder="EndTime"
+                                   aria-describedby="defaultFormControlHelp" />
+                            <span class="text-danger" asp-validation-for="EndTime"></span>
+                        </div>
+                        <div>
                             <label asp-for="Duration" class="form-label">Duration</label>
                             <input asp-for="Duration"
                                    class="form-control"

@@ -57,12 +57,12 @@ namespace EduHomeProject.Areas.Admin.Controllers
             }
             if (!model.Image.IsAllowedSize(10))
             {
-                ModelState.AddModelError("", "Şəklin Hecmi 10 mb- dan boyuk ola bilmez");
+                ModelState.AddModelError("", "Photo cannot be larger than 10 mb.");
                 return View();
             }
             if (!model.Image.IsImage())
             {
-                ModelState.AddModelError("", "Şəkil uyğun deyil");
+                ModelState.AddModelError("", "The photo is not suitable");
                 return View();
             }
             string unicalName = await model.Image.GenerateFile(Constants.BlogImagePath);
@@ -132,12 +132,12 @@ namespace EduHomeProject.Areas.Admin.Controllers
             }
             if (!model.Image.IsAllowedSize(10))
             {
-                ModelState.AddModelError("", "Şəklin Hecmi 10 mb- dan boyuk ola bilmez");
+                ModelState.AddModelError("", "Photo cannot be larger than 10 mb.");
                 return View(eventemodel);
             }
             if (!model.Image.IsImage())
             {
-                ModelState.AddModelError("", "Şəkil uyğun deyil");
+                ModelState.AddModelError("", "The photo is not suitable");
                 return View(eventemodel);
             }
             string imagepath = Path.Combine(Constants.BlogImagePath, blog.ImageUrl);

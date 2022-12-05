@@ -4,6 +4,7 @@ namespace EduHomeProject.Areas.Admin.Models
 {
     public class CreateTeacherSosialMediaViewModel
     {
+        public string Name { get; set; }
         public string MediaLink { get; set; }
         public IFormFile MediaLogo { get; set; }        
         public int TeacherId { get; set; }

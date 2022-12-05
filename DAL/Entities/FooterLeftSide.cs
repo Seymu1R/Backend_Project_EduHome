@@ -3,7 +3,6 @@
     public class FooterLeftSide:BaseEntity
     {
         public string Logo { get; set; }
-        public string Content { get; set; }
-        public List<TeacherSosialMedia> TeacherSosialMedias { get; set; }
+        public string Content { get; set; }        
     }
 }

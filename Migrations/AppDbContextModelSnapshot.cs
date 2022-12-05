@@ -209,6 +209,9 @@ namespace EduHomeProject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("EndTime")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("ImageUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -220,9 +223,8 @@ namespace EduHomeProject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("StartTime")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("StartTime")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -383,6 +385,50 @@ namespace EduHomeProject.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Informations");
+                });
+
+            modelBuilder.Entity("EduHomeProject.DAL.Entities.LeaveMessage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Subject")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("LeaveMessages");
                 });
 
             modelBuilder.Entity("EduHomeProject.DAL.Entities.Slider", b =>
@@ -676,9 +722,6 @@ namespace EduHomeProject.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("FooterLeftSideId")
-                        .HasColumnType("int");
-
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -704,8 +747,6 @@ namespace EduHomeProject.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("FooterLeftSideId");
 
                     b.HasIndex("TeacherId");
 
@@ -1017,19 +1058,11 @@ namespace EduHomeProject.Migrations
 
             modelBuilder.Entity("EduHomeProject.DAL.Entities.TeacherSosialMedia", b =>
                 {
-                    b.HasOne("EduHomeProject.DAL.Entities.FooterLeftSide", "FooterLeftSide")
-                        .WithMany("TeacherSosialMedias")
-                        .HasForeignKey("FooterLeftSideId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("EduHomeProject.DAL.Entities.Teacher", "Teacher")
                         .WithMany("TeacherSosialMedias")
                         .HasForeignKey("TeacherId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("FooterLeftSide");
 
                     b.Navigation("Teacher");
                 });
@@ -1097,11 +1130,6 @@ namespace EduHomeProject.Migrations
             modelBuilder.Entity("EduHomeProject.DAL.Entities.Event", b =>
                 {
                     b.Navigation("SpeakerEvents");
-                });
-
-            modelBuilder.Entity("EduHomeProject.DAL.Entities.FooterLeftSide", b =>
-                {
-                    b.Navigation("TeacherSosialMedias");
                 });
 
             modelBuilder.Entity("EduHomeProject.DAL.Entities.Speaker", b =>
