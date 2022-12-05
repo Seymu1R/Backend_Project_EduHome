@@ -24,7 +24,8 @@ namespace EduHomeProject.Controllers
             LeaveMessage message= new LeaveMessage();
             if (!ModelState.IsValid) 
             {
-                return View(model);
+                return View();
+                return ViewComponent("LeaveMessage");
             }
             message.Subject=model.Subject;
             message.Email = model.Email;

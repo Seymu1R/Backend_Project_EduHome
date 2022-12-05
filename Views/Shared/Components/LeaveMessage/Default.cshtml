@@ -7,24 +7,24 @@
             <div class="row">
                 <div class="col-md-12">
                     <p>Name</p>
-                    <input  asp-for="Name"  name="name" id="name">
-                    <span class="text-danger" asp-validation-for="Name"></span>
+                    <input  asp-for="Name"   id="name">
+                    <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
                 <div class="col-md-12">
                     <p>Email</p>
-                    <input asp-for="Email" type="text" name="email" id="email">
-                    <span class="text-danger" asp-validation-for="Email"></span>
+                    <input asp-for="Email"  id="email">
+                    <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
                 <div class="col-md-12">
                     <p>Subject</p>
-                    <input asp-for="Subject" name="subject" id="subject">
-                    <span class="text-danger" asp-validation-for="Subject"></span>
+                    <input asp-for="Subject" id="subject">
+                    <span asp-validation-for="Subject" class="text-danger"></span>
                     <p>Massage</p>
-                    <textarea  asp-for="Message" name="message" id="message" cols="15" rows="10"></textarea>
-                    <span class="text-danger" asp-validation-for="Message"></span>
+                    <textarea  asp-for="Message"  id="message" cols="15" rows="10"></textarea>
+                    <span asp-validation-for="Message" class="text-danger"></span>
                 </div>
             </div>
-            <button  class="reply-btn" type="submit"  data-text="send"><span>send message</span></button>
+            <button  class="btn btn-success" type="submit"  data-text="send"><span>send message</span></button>
             
         </form>
     </div>
