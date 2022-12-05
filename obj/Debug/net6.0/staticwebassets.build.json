@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FBD3I+rRnDGLmy0TuXnPXep+JiIWYjdJa92q6W8Ep1k=",
+  "Hash": "3f+bzf0aEiduAoXjEArMosy5nzWHzLncHKK4FkBdkFE=",
   "Source": "EduHomeProject",
   "BasePath": "_content/EduHomeProject",
   "Mode": "Default",
@@ -221,23 +221,6 @@
       "OriginalItemSpec": "wwwroot\\admin\\assets\\img\\blog\\b89966fa-f0ab-4a68-bc8f-6e2bdc345402-banner-12.jpg"
     },
     {
-      "Identity": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\course\\058ab619-e438-42a5-99c4-332053045aa4-course5.jpg",
-      "SourceId": "EduHomeProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\",
-      "BasePath": "_content/EduHomeProject",
-      "RelativePath": "admin/assets/img/course/058ab619-e438-42a5-99c4-332053045aa4-course5.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\admin\\assets\\img\\course\\058ab619-e438-42a5-99c4-332053045aa4-course5.jpg"
-    },
-    {
       "Identity": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\course\\07f8474a-2814-4c23-a836-5cd045f4076f-favicon.png",
       "SourceId": "EduHomeProject",
       "SourceType": "Discovered",
@@ -272,12 +255,12 @@
       "OriginalItemSpec": "wwwroot\\admin\\assets\\img\\course\\1a74b538-cb0e-49d0-8451-d9d9d72aa48d-banner-12.jpg"
     },
     {
-      "Identity": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\course\\246a8dbf-180b-41ef-a327-5858c4e78373-course5.jpg",
+      "Identity": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\course\\4c508cf5-1b0e-49f7-83fd-157fc481189f-course2.jpg",
       "SourceId": "EduHomeProject",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\",
       "BasePath": "_content/EduHomeProject",
-      "RelativePath": "admin/assets/img/course/246a8dbf-180b-41ef-a327-5858c4e78373-course5.jpg",
+      "RelativePath": "admin/assets/img/course/4c508cf5-1b0e-49f7-83fd-157fc481189f-course2.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -286,7 +269,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\admin\\assets\\img\\course\\246a8dbf-180b-41ef-a327-5858c4e78373-course5.jpg"
+      "OriginalItemSpec": "wwwroot\\admin\\assets\\img\\course\\4c508cf5-1b0e-49f7-83fd-157fc481189f-course2.jpg"
     },
     {
       "Identity": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\course\\508c5061-e19f-4ba6-b37c-f5b34a2c8a22-blog-2.jpg",
@@ -338,23 +321,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\admin\\assets\\img\\course\\885b726d-889d-4293-a141-4c7dc5a5f4a4-bg-newletter.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\course\\93a1e823-408e-4f36-b975-eaf8431ffef6-course9.jpg",
-      "SourceId": "EduHomeProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\",
-      "BasePath": "_content/EduHomeProject",
-      "RelativePath": "admin/assets/img/course/93a1e823-408e-4f36-b975-eaf8431ffef6-course9.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\admin\\assets\\img\\course\\93a1e823-408e-4f36-b975-eaf8431ffef6-course9.jpg"
     },
     {
       "Identity": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\course\\a6a6bb3b-b63d-4665-a656-fd3cd1342744-banner-10.jpg",
@@ -1375,6 +1341,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\admin\\assets\\img\\speaker\\9185a369-936d-4052-8a16-1011d69b170b-teacher4.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\speaker\\c2d08b72-ce11-49e7-948a-c0d44ed5ece4-teacher10.jpg",
+      "SourceId": "EduHomeProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\",
+      "BasePath": "_content/EduHomeProject",
+      "RelativePath": "admin/assets/img/speaker/c2d08b72-ce11-49e7-948a-c0d44ed5ece4-teacher10.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\assets\\img\\speaker\\c2d08b72-ce11-49e7-948a-c0d44ed5ece4-teacher10.jpg"
     },
     {
       "Identity": "C:\\Users\\SeymurManafov\\Desktop\\EduHome\\EduHomeProject\\wwwroot\\admin\\assets\\img\\teacher\\4b3d6aea-8c09-4532-99a9-d9742e5f4d61-Isac.jpg",

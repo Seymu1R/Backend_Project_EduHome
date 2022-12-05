@@ -5,7 +5,7 @@
     {
          <div class="single-post mb-30  row">
         <div class="single-post-img col-md-6 ">
-            <a href="blog-details.html">
+            <a asp-controller="Blog" asp-action="Detail" asp-route-id="@blog.Id">
                 <img src="~/admin/assets/img/blog/@blog.ImageUrl" alt="post">
                 <div class="blog-hover">
                     <i class="fa fa-link"></i>
@@ -13,7 +13,7 @@
             </a>
         </div>
         <div class="single-post-content col-md-6 ">
-            <h4><a href="blog-details.html">@blog.Title</a></h4>
+            <h4><a asp-controller="Blog" asp-action="Detail" asp-route-id="@blog.Id">@blog.Title</a></h4>
             <p>By Alex  /  @blog.CreatedDate</p>
         </div>
        </div>
